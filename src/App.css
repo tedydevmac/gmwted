@@ -1,50 +1,151 @@
-.App {
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
-}
-
-.project-list {
+.home {
+  align-items: center;
+  background-color: var(--greygrey-100);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 80px;
+  padding: 40px 160px;
+  position: relative;
+  width: 1920px;
 }
 
-.project-item {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
+.home .main {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 160px;
+  max-width: 1440px;
+  position: relative;
+  width: 100%;
 }
 
-.project-item h3 {
-  margin-top: 0;
+.home .about {
+  align-items: flex-start;
+  border-radius: 40px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  padding: 40px 56px;
+  position: relative;
+  width: 100%;
+}
+
+.home .div {
+  color: var(--adaptivestrong);
+  font-family: var(--display-semibold-l-font-family);
+  font-size: var(--display-semibold-l-font-size);
+  font-style: var(--display-semibold-l-font-style);
+  font-weight: var(--display-semibold-l-font-weight);
+  letter-spacing: var(--display-semibold-l-letter-spacing);
+  line-height: var(--display-semibold-l-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.home .welcome-to-the {
+  align-self: stretch;
+  color: transparent;
+  font-family: var(--heading-regular-l-font-family);
+  font-size: var(--heading-regular-l-font-size);
+  font-style: var(--heading-regular-l-font-style);
+  font-weight: var(--heading-regular-l-font-weight);
+  letter-spacing: var(--heading-regular-l-letter-spacing);
+  line-height: var(--heading-regular-l-line-height);
+  position: relative;
+}
+
+.home .text-wrapper-4 {
+  color: #ffffff99;
+  font-family: var(--heading-regular-l-font-family);
+  font-size: var(--heading-regular-l-font-size);
+  font-style: var(--heading-regular-l-font-style);
+  font-weight: var(--heading-regular-l-font-weight);
+  letter-spacing: var(--heading-regular-l-letter-spacing);
+  line-height: var(--heading-regular-l-line-height);
+}
+
+.home .text-wrapper-5 {
+  color: #ffffff;
+  font-family: var(--heading-regular-l-font-family);
+  font-size: var(--heading-regular-l-font-size);
+  font-style: var(--heading-regular-l-font-style);
+  font-weight: var(--heading-regular-l-font-weight);
+  letter-spacing: var(--heading-regular-l-letter-spacing);
+  line-height: var(--heading-regular-l-line-height);
+}
+
+.home .content {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.home .title {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  padding: 0px 56px;
+  position: relative;
+}
+
+.home .text-wrapper-6 {
+  color: var(--adaptivestrong);
+  font-family: var(--display-semibold-m-font-family);
+  font-size: var(--display-semibold-m-font-size);
+  font-style: var(--display-semibold-m-font-style);
+  font-weight: var(--display-semibold-m-font-weight);
+  letter-spacing: var(--display-semibold-m-letter-spacing);
+  line-height: var(--display-semibold-m-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.home .column {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 40px;
+  overflow-x: scroll;
+  position: relative;
+  width: 100%;
+}
+
+.home .column::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.home .card {
+  height: 480px;
+  position: relative;
+  width: 760px;
+}
+
+.home .footer-instance {
+  align-self: stretch !important;
+  background-color: transparent !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+.home .navigation {
+  height: 323px;
+  left: 71px;
+  position: fixed;
+  top: 61px;
+  width: 82px;
 }

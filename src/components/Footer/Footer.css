@@ -1,0 +1,71 @@
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 80px 0px;
+  position: relative;
+  width: 1177px;
+}
+
+.footer .brought-to-you-be {
+  color: transparent;
+  font-family: "Inter", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.footer .text-wrapper {
+  color: #ffffff99;
+  font-family: var(--heading-regular-m-font-family);
+  font-size: var(--heading-regular-m-font-size);
+  font-style: var(--heading-regular-m-font-style);
+  font-weight: var(--heading-regular-m-font-weight);
+  letter-spacing: var(--heading-regular-m-letter-spacing);
+  line-height: var(--heading-regular-m-line-height);
+}
+
+.footer .span {
+  color: #ffffff;
+}
+
+.footer .created-by-lorant {
+  color: transparent;
+  font-family: var(--heading-regular-XS-font-family);
+  font-size: var(--heading-regular-XS-font-size);
+  font-style: var(--heading-regular-XS-font-style);
+  font-weight: var(--heading-regular-XS-font-weight);
+  letter-spacing: var(--heading-regular-XS-letter-spacing);
+  line-height: var(--heading-regular-XS-line-height);
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.footer .text-wrapper-2 {
+  color: #ffffff99;
+  font-family: var(--heading-regular-XS-font-family);
+  font-size: var(--heading-regular-XS-font-size);
+  font-style: var(--heading-regular-XS-font-style);
+  font-weight: var(--heading-regular-XS-font-weight);
+  letter-spacing: var(--heading-regular-XS-letter-spacing);
+  line-height: var(--heading-regular-XS-line-height);
+}
+
+.footer .text-wrapper-3 {
+  color: #ffffff;
+  font-family: var(--heading-regular-XS-font-family);
+  font-size: var(--heading-regular-XS-font-size);
+  font-style: var(--heading-regular-XS-font-style);
+  font-weight: var(--heading-regular-XS-font-weight);
+  letter-spacing: var(--heading-regular-XS-letter-spacing);
+  line-height: var(--heading-regular-XS-line-height);
+}
