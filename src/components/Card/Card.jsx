@@ -2,9 +2,16 @@ import React from "react";
 import "./Card.css";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 
-export const Card = ({ title, description, imageUrl, imageSrc, link }) => {
+export const Card = ({
+  title,
+  description,
+  imageUrl,
+  imageSrc,
+  link,
+  github,
+}) => {
   return (
-    <div className="card">
+    <a href={github} className="card">
       <a
         href={link}
         className="image"
@@ -20,6 +27,6 @@ export const Card = ({ title, description, imageUrl, imageSrc, link }) => {
           <div className="infodesc">{description}</div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };

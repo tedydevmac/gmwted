@@ -18,7 +18,7 @@ html {
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
-  gap: 160px;
+  gap: 130px;
   max-width: 1440px;
   position: relative;
   width: 100%;
@@ -98,7 +98,6 @@ html {
   align-items: flex-start;
   display: inline-flex;
   flex: 0 0 auto;
-  gap: 8px;
   padding: 0px 56px;
   position: relative;
 }
@@ -128,6 +127,7 @@ html {
   gap: 40px;
   position: relative;
   width: 100%;
+  padding-top: 2%;
   white-space: nowrap;
 }
 
