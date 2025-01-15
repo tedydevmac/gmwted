@@ -3,59 +3,54 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome C
 import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import "./App.css";
+import { Card } from "./components/Card/Card";
 
 export const App = () => {
   return (
-    <div className="home">
+    <div className="home" id="home">
       <div className="main">
         <div className="about" id="about">
-          <div className="div">Goh Min Wen, Ted</div>
+          <div className="div">Hi! My name is Ted.</div>
 
           <p className="welcome-to-the">
             <span className="text-wrapper-4">
-              Welcome to the extraordinary world of
+              Hello! Welcome to the portfolio of
             </span>
 
             <span className="text-wrapper-5">
               {" "}
               {"{"}
-              {"{"} Your name {"}"}
+              {"{"} Ted {"}"}
               {"}"}
             </span>
 
-            <span className="text-wrapper-4">
-              , a versatile and imaginative artist who skillfully navigates the
-              realms of{" "}
-            </span>
+            <span className="text-wrapper-4">, I specialise in </span>
 
-            <span className="text-wrapper-5">product design</span>
+            <span className="text-wrapper-5">App & Web Dev</span>
 
             <span className="text-wrapper-4">, </span>
 
-            <span className="text-wrapper-5">photography</span>
+            <span className="text-wrapper-5">AI/ML</span>
 
             <span className="text-wrapper-4"> and </span>
 
-            <span className="text-wrapper-5">digital art</span>
+            <span className="text-wrapper-5">UI/UX design</span>
 
             <span className="text-wrapper-4">
-              . With a keen eye for detail and a relentless pursuit of
-              innovation, {"{"}
-              {"{"} Your name {"}"}
-              {"}"} crafts captivating{" "}
+              . I enjoy {"{"}
+              {"{"} integrating software and hardware {"}"}
+              {"}"} to create products that solve{" "}
             </span>
 
-            <span className="text-wrapper-5">visual narratives</span>
+            <span className="text-wrapper-5">real world problems</span>
 
-            <span className="text-wrapper-4">, immersive </span>
+            <span className="text-wrapper-4">, make processes more </span>
 
-            <span className="text-wrapper-5">digital realms</span>
+            <span className="text-wrapper-5">efficient and low effort</span>
 
             <span className="text-wrapper-4">, and functional yet </span>
 
-            <span className="text-wrapper-5">
-              aesthetically pleasing products
-            </span>
+            <span className="text-wrapper-5">aesthetically pleasing</span>
 
             <span className="text-wrapper-4">.</span>
           </p>
@@ -63,26 +58,39 @@ export const App = () => {
 
         <div className="content" id="projects">
           <div className="title">
-            <div className="text-wrapper-6">Projects</div>
+            <div className="text-wrapper-6">SST Inc</div>
           </div>
 
           <div className="column">
-            <img
-              className="card"
-              alt="Card"
-              src="https://c.animaapp.com/jGvhNn27/img/-card.svg"
+            <Card
+              title="SST Open House App 2024   (IOS/Android)"
+              description="I am one of the lead developers for this app which was used during SST's Open House event."
+              imageUrl="fa-solid fa-door-open"
+              imageSrc={"/src/assets/SSTOH2024.png"}
+              link={
+                "https://apps.apple.com/us/app/sst-open-house-2024/id6479939416"
+              }
             />
-
-            <img
-              className="card"
-              alt="Card"
-              src="https://c.animaapp.com/jGvhNn27/img/-card-1.svg"
+            <Card
+              title="ASPA   (IOS/Android)"
+              description="This was my 2023 Serve project which I worked on until 2024"
+              imageUrl="fa-solid fa-user-doctor"
+              imageSrc={"/src/assets/ASPA.png"}
+              link={"https://github.com/tedydevmac/aspa.git"}
             />
-
-            <img
-              className="card"
-              alt="Card"
-              src="https://c.animaapp.com/jGvhNn27/img/-card-2.svg"
+            <Card
+              title="SST Virtual Tour (Web)"
+              description="This was my 2024 Serve project which I am still working on"
+              imageUrl="fa-solid fa-school"
+              imageSrc={"/src/assets/filler.jpeg"}
+              link={"https://github.com/tedydevmac/virtualtour.git"}
+            />
+            <Card
+              title="SST Announcer (Android)"
+              description="As a volunteer, I helped add new features to this app during its revamp in 2023"
+              imageUrl="fa-solid fa-school"
+              imageSrc={"/src/assets/sstannouncer.png"}
+              link={"https://github.com/tedydevmac/virtualtour.git"}
             />
           </div>
         </div>

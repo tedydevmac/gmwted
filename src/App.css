@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .home {
   align-items: center;
   background-color: var(--greygrey-100);
@@ -118,21 +122,18 @@
   align-self: stretch;
   display: flex;
   flex: 0 0 auto;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  flex-direction: row;
   gap: 40px;
-  overflow-x: scroll;
   position: relative;
   width: 100%;
+  white-space: nowrap;
 }
 
 .home .column::-webkit-scrollbar {
   display: none;
   width: 0;
-}
-
-.home .card {
-  height: 480px;
-  position: relative;
-  width: 760px;
 }
 
 .home .footer-instance {
@@ -143,7 +144,7 @@
 }
 
 .home .navigation {
-  height: 323px;
+  height: 300px;
   left: 71px;
   position: fixed;
   top: 61px;

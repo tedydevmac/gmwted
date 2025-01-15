@@ -10,6 +10,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--greygrey-100);
 }
 /* a blue color as a generic focus style */
 button:focus-visible {
