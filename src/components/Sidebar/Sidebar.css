@@ -18,6 +18,7 @@
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
     0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 6px 9px 0px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(20px);
+  z-index: 1;
 }
 .icon-link {
   margin: 5px 0; /* Space between icons */
@@ -36,4 +37,44 @@
   background: var(--White-white-10, rgba(255, 255, 255, 0.1));
   border-radius: 50%; /* Make the background a circle on hover */
   color: #aaaeb9;
+  animation: expand ease 0.4s forwards 1.5s; /* Trigger the expansion after 3 seconds */
+}
+
+.icon-link:hover::after {
+  content: attr(data-text); /* Use data-text attribute for the text */
+  position: absolute;
+  white-space: nowrap;
+  border-radius: 30px;
+  opacity: 0;
+  text-align: center; /* Center the text */
+  animation: showText ease 0.3s forwards 1.5s; /* Trigger the text appearance after 3 seconds */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@keyframes expand {
+  0% {
+    width: 56px;
+    border-radius: 50%;
+    font-size: 25px;
+  }
+  100% {
+    width: 175px; /* Adjust the width as needed */
+    border-radius: 15px; /* Rounded rectangle */
+    font-size: 0px;
+    background: rgb(30, 30, 30);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+      0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 6px 9px 0px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

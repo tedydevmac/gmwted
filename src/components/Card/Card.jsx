@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Card.css";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
-
 export const Card = ({
   title,
   description,
@@ -10,43 +11,77 @@ export const Card = ({
   link,
   github,
   iconHover,
+  images,
+  expanddesc,
+  tooBig,
+  singleImage,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleCardClick = () => {
     setIsExpanded(!isExpanded);
   };
   return (
-    <div
-      className={`card ${isExpanded ? "expanded" : ""}`}
-      onClick={handleCardClick}
-    >
-      <a
-        href={link}
-        className="image"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div className={`card ${isExpanded ? "expanded" : ""}`}>
+      {isExpanded ? (
+        singleImage ? (
+          <img src={images[0]} alt={imageSrc} className={`img single`}></img>
+        ) : (
+          <Carousel
+            className={`image extend`}
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            swipeable={true}
+            emulateTouch={true}
+            useKeyboardArrows={true}
+            showArrows={tooBig ? true : false}
+            showThumbs={tooBig ? false : true}
+            showStatus={false}
+          >
+            {images.map((imgSrc, index) => (
+              <div key={index}>
+                <img
+                  src={imgSrc}
+                  alt={imageSrc}
+                  className={`img ${tooBig ? "scaledown" : ""}`}
+                />
+              </div>
+            ))}
+          </Carousel>
+        )
+      ) : (
+        <a
+          href={link}
+          className="image"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={imageSrc}
+            className={`img ${iconHover ? "hover-enabled" : ""}`}
+          />
+        </a>
+      )}
+      <div
+        className={`info ${isExpanded ? "expanded" : ""}`}
+        onClick={handleCardClick}
       >
-        <img
-          src={imageSrc}
-          className={`img ${iconHover ? "hover-enabled" : ""}`}
-        />
-      </a>
-      <div className="info">
-        <i className={`icon ${imageUrl}`}></i>
+        {isExpanded ? (
+          <a href={github} target="_blank" rel="noopener noreferrer">
+            <i className={`github fa-brands fa-github`} />
+          </a>
+        ) : (
+          <i className={`icon ${imageUrl}`}></i>
+        )}
         <div className="infotextcol">
-          <text className="infotitle">{title}</text>
-          <text className="infodesc">{description}</text>
+          <text className={`infotitle ${isExpanded ? "cardtitle" : ""}`}>
+            {title}
+          </text>
+          <text className={`infodesc ${isExpanded ? "carddesc" : ""}`}>
+            {isExpanded ? expanddesc : description}
+          </text>
         </div>
       </div>
-      {isExpanded && (
-        <div className="expanded-content">
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </div>
-      )}
     </div>
   );
 };
