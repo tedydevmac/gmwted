@@ -37,6 +37,13 @@ html {
   width: 100%;
 }
 
+.home .introrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Add this line */
+  align-items: center; /* Add this line */
+}
+
 .home .div {
   color: var(--adaptivestrong);
   font-family: var(--display-semibold-l-font-family);
@@ -149,4 +156,11 @@ html {
   position: fixed;
   top: 61px;
   width: 82px;
+}
+
+.home .profile {
+  height: 27.5%;
+  width: 27.5%;
+  border-radius: 35%;
+  margin-right: 7.5%;
 }

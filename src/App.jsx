@@ -9,49 +9,56 @@ export const App = () => {
   return (
     <div className="home" id="home">
       <div className="main">
-        <div className="about" id="about">
-          <div className="div">Hi! My name is Ted.</div>
-
-          <p className="welcome-to-the">
-            <span className="text-wrapper-4">Welcome to the portfolio of</span>
-
-            <span className="text-wrapper-5">
-              {" "}
-              {"{"}
-              {"{"} Ted {"}"}
-              {"}"}
-            </span>
-
-            <span className="text-wrapper-4">, I specialise in </span>
-
-            <span className="text-wrapper-5">App & Web Dev</span>
-
-            <span className="text-wrapper-4">, </span>
-
-            <span className="text-wrapper-5">AI/ML</span>
-
-            <span className="text-wrapper-4"> and </span>
-
-            <span className="text-wrapper-5">UI/UX design</span>
-
-            <span className="text-wrapper-4">
-              . I enjoy {"{"}
-              {"{"} integrating software and hardware {"}"}
-              {"}"} to create products that solve{" "}
-            </span>
-
-            <span className="text-wrapper-5">real world problems</span>
-
-            <span className="text-wrapper-4">, make processes more </span>
-
-            <span className="text-wrapper-5">efficient and low effort</span>
-
-            <span className="text-wrapper-4">, and functional yet </span>
-
-            <span className="text-wrapper-5">aesthetically pleasing</span>
-
-            <span className="text-wrapper-4">.</span>
-          </p>
+        <div className="introrow">
+          <div className="about" id="about">
+            <div className="div">Hey, I'm Ted!</div>
+            <p className="welcome-to-the">
+              <span className="text-wrapper-4">
+                I'm a 16 year old developer from Singapore. <br />I worked on
+                apps that have
+              </span>
+              <span className="text-wrapper-5">
+                {" "}
+                {"{"}
+                {"{"} served over 1000 users {"}"}
+                {"}"}
+              </span>
+              <span className="text-wrapper-4">
+                , participated in several hackathons & CTFs, and have
+              </span>
+              <span className="text-wrapper-5"> won awards </span>
+              <span className="text-wrapper-4">
+                in competitions. <br />I have taught classes on the Flutter
+                framework and have
+              </span>
+              <span className="text-wrapper-5">
+                {" "}
+                engaged in several service-learning projects{" "}
+              </span>
+              <span className="text-wrapper-4">as</span>
+              <span className="text-wrapper-5">
+                {" "}
+                {"{"}
+                {"{"} an Active Citizenship Education leader {"}"}
+                {"}"}
+              </span>
+              <span className="text-wrapper-4">
+                . <br />
+                Currently, I am working as a
+              </span>
+              <span className="text-wrapper-5">
+                {" "}
+                {"{"}
+                {"{"} student employee at Affinidi {"}"}
+                {"}"}
+              </span>
+              <span className="text-wrapper-4">
+                , learning and using their suite of technologies to build a
+                mobile app for verifiable student reputation.
+              </span>
+            </p>
+          </div>
+          <img className="profile" src="/src/assets/logos/try2.jpg" />
         </div>
         <div className="content" id="projects">
           <div className="title">
@@ -139,59 +146,6 @@ export const App = () => {
               github={
                 "https://github.com/tedydevmac/sstinccamp2024hackathon.git"
               }
-              iconHover={true}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
-          </div>
-        </div>
-        <div className="content">
-          <div className="title">
-            <div className="text-wrapper-6">Projects / School Events</div>
-          </div>
-
-          <div className="column">
-            <Card
-              tooBig={false}
-              singleImage={false}
-              images={["/src/assets/logos/telegram.webp"]}
-              title="Student Helper AI Bot - ARTC-SST Innovation Camp"
-              description="A Telegram bot to assist students in their school work management"
-              imageUrl="fa-brands fa-telegram"
-              imageSrc={"/src/assets/logos/telegram.webp"}
-              link={"https://github.com/tedydevmac/studenthelp.git"}
-              github={"https://github.com/tedydevmac/studenthelp.git"}
-              iconHover={true}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
-            <Card
-              tooBig={false}
-              singleImage={false}
-              images={["/src/assets/logos/python.png"]}
-              title="Cyberbullying vs AI - S3 Computing+ Coursework "
-              description="This project focuses on detecting and classifying cyberbullying in text, particularly against the LGBTQ community and minority groups."
-              imageUrl="fa-solid fa-brain"
-              imageSrc={"/src/assets/logos/python.png"}
-              link={"https://github.com/tedydevmac/S3T3CPPT.git"}
-              github={"https://github.com/tedydevmac/S3T3CPPT.git"}
-              iconHover={true}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
-            <Card
-              tooBig={false}
-              singleImage={false}
-              images={["/src/assets/logos/sst.png"]}
-              title="WorkBud - S2 ChangeMakers Project"
-              description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
-              imageUrl="fa-solid fa-dumbbell"
-              imageSrc={"/src/assets/logos/sst.png"}
-              link={"https://github.com/tedydevmac/innofest-app.git"}
-              github={"https://github.com/tedydevmac/innofest-app.git"}
               iconHover={true}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -294,13 +248,66 @@ export const App = () => {
               images={["/src/assets/logos/sst.png"]}
               title={"ARTC-SST Innovation Camp 2024"}
               description={
-                "An innovation camp where we worked on a IoT-enabled hydroponics system to boost plant growth"
+                "An innovation camp where we worked on a IoT-enabled hydroponics system to boost plant growth. Won Most Environmentally Sustainable Award."
               }
               imageUrl={"fa-solid fa-gear"}
               imageSrc={"/src/assets/logos/sst.png"}
               link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
               github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
               iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+          </div>
+        </div>
+        <div className="content">
+          <div className="title">
+            <div className="text-wrapper-6">Projects / School Events</div>
+          </div>
+
+          <div className="column">
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/src/assets/logos/telegram.webp"]}
+              title="Student Helper AI Bot - ARTC-SST Innovation Camp"
+              description="A Telegram bot to assist students in their school work management"
+              imageUrl="fa-brands fa-telegram"
+              imageSrc={"/src/assets/logos/telegram.webp"}
+              link={"https://github.com/tedydevmac/studenthelp.git"}
+              github={"https://github.com/tedydevmac/studenthelp.git"}
+              iconHover={true}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/src/assets/logos/python.png"]}
+              title="Cyberbullying vs AI - S3 Computing+ Coursework "
+              description="This project focuses on detecting and classifying cyberbullying in text, particularly against the LGBTQ community and minority groups."
+              imageUrl="fa-solid fa-brain"
+              imageSrc={"/src/assets/logos/python.png"}
+              link={"https://github.com/tedydevmac/S3T3CPPT.git"}
+              github={"https://github.com/tedydevmac/S3T3CPPT.git"}
+              iconHover={true}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/src/assets/logos/sst.png"]}
+              title="WorkBud - S2 ChangeMakers Project"
+              description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
+              imageUrl="fa-solid fa-dumbbell"
+              imageSrc={"/src/assets/logos/sst.png"}
+              link={"https://github.com/tedydevmac/innofest-app.git"}
+              github={"https://github.com/tedydevmac/innofest-app.git"}
+              iconHover={true}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
