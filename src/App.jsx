@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { Card } from "./components/Card/Card";
+import { Skills } from "./components/Skills/Skills";
 
 export const App = () => {
   return (
@@ -60,6 +61,7 @@ export const App = () => {
           </div>
           <img className="profile" src="/src/assets/logos/try2.jpg" />
         </div>
+        <Skills />
         <div className="content" id="projects">
           <div className="title">
             <div className="text-wrapper-6">SST Inc</div>
