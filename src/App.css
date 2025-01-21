@@ -164,3 +164,21 @@ html {
   border-radius: 35%;
   margin-right: 7.5%;
 }
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.toprowdiv {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+
+.icons {
+  font-size: 40px; /* Adjust the size of the icons */
+  color: #656a7b; /* Icon color */
+  text-decoration: none; /* Remove underline */
+  height: 56px; /* Set a fixed height */
+  width: 56px; /* Set a fixed width */
+}

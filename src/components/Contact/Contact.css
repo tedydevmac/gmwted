@@ -1,0 +1,73 @@
+.contactbox {
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04),
+    0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  background  : radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  width: 95%;
+  height: 100%;
+  padding-left: 2%;
+  padding-right: 1.5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+}
+.contacttitle {
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  user-select: none;
+  color: var(--Adaptive-Medium, rgba(255, 255, 255, 0.8));
+}
+.formarea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.contactpara {
+  color: var(--Adaptive-Weak, rgba(255, 255, 255, 0.6));
+  line-height: 1.5;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  user-select: none;
+}
+.textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #ededed;
+  color: black;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 1%;
+}
+.textarea.email {
+  width: 30%;
+  height: 40px;
+}
+.submitbutton {
+  border-radius: 10px;
+  background-color: #3a6351;
+  color: white;
+  width: 20%;
+  height: 100%;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  user-select: none;
+  padding: 1%;
+  margin-top: 10px;
+}

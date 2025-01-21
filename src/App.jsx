@@ -5,6 +5,7 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { Card } from "./components/Card/Card";
 import { Skills } from "./components/Skills/Skills";
+import { Contact } from "./components/Contact/Contact";
 
 export const App = () => {
   return (
@@ -12,7 +13,20 @@ export const App = () => {
       <div className="main">
         <div className="introrow">
           <div className="about" id="about">
-            <div className="div">Hey, I'm Ted!</div>
+            <div className="first">
+              <div className="div">Hey, I'm Ted!</div>
+              <div className="toprowdiv">
+                <a href="">
+                  <i className={`icons fa-brands fa-github`} />
+                </a>
+                <a href="">
+                  <i className={`icons fa-brands fa-linkedin`} />
+                </a>
+                <a href="">
+                  <i className={`icons fa-solid fa-envelope`}></i>
+                </a>
+              </div>
+            </div>
             <p className="welcome-to-the">
               <span className="text-wrapper-4">
                 I'm a 16 year old developer from Singapore. <br />I worked on
@@ -50,7 +64,7 @@ export const App = () => {
               <span className="text-wrapper-5">
                 {" "}
                 {"{"}
-                {"{"} student employee at Affinidi {"}"}
+                {"{"} student intern at Affinidi {"}"}
                 {"}"}
               </span>
               <span className="text-wrapper-4">
@@ -216,6 +230,22 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={true}
+              images={["/src/assets/logos/noi.jpeg"]}
+              title={"National Olympiad in Informatics (NOI) 2025"}
+              description={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              }
+              imageUrl={"fa-solid fa-computer"}
+              imageSrc={"/src/assets/logos/noi.jpeg"}
+              link={"https://noisg.comp.nus.edu.sg/noi/"}
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={true}
               images={["/src/assets/perse/persecc.png"]}
               title={"Perse Coding Challenge 2023 - 2025"}
               description={"Won Distinction - Best in School award in 2023"}
@@ -316,8 +346,8 @@ export const App = () => {
             />
           </div>
         </div>
+        <Contact />
       </div>
-
       <div id="footer">
         <Footer className="footer-instance" />
       </div>
