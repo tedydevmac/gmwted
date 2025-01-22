@@ -1,5 +1,6 @@
 {
-  "name": "https://tedydevmac.github.io/",
+  "name": "tedydevmac",
+  "homepage": "https://tedydevmac.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
