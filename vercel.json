@@ -1,6 +1,7 @@
 {
   "version": 1,
   "images": {
+    "sizes": [256, 384],
     "domains": ["gmwted.vercel.app"],
     "minimumCacheTTL": 60,
     "formats": ["image/avif", "image/webp"]
