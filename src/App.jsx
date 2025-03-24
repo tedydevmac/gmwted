@@ -81,10 +81,7 @@ export const App = () => {
               </span>
             </p>
           </div>
-          <img
-            className="profile"
-            src="/_vercel/image?url=/static/logos/IMG_3817.png&w=200&q=70"
-          />
+          <img className="profile" src="/static/logos/IMG_3817.png" />
         </div>
         <Skills />
         <div className="content" id="projects">
