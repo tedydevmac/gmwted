@@ -16,13 +16,21 @@ export const App = () => {
             <div className="first">
               <div className="div">Hey, I'm Ted!</div>
               <div className="toprowdiv">
-                <a href="">
+                <a
+                  href="https://github.com/tedydevmac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className={`icons fa-brands fa-github`} />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.linkedin.com/in/ted-goh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className={`icons fa-brands fa-linkedin`} />
                 </a>
-                <a href="">
+                <a href="#contact">
                   <i className={`icons fa-solid fa-envelope`}></i>
                 </a>
               </div>
@@ -59,12 +67,12 @@ export const App = () => {
               </span>
               <span className="text-wrapper-4">
                 . <br />
-                Currently, I am working as a
+                Currently, I am working on a
               </span>
               <span className="text-wrapper-5">
                 {" "}
                 {"{"}
-                {"{"} student intern at Affinidi {"}"}
+                {"{"} capstone project with Affinidi {"}"}
                 {"}"}
               </span>
               <span className="text-wrapper-4">
@@ -73,7 +81,7 @@ export const App = () => {
               </span>
             </p>
           </div>
-          <img className="profile" src="/src/assets/logos/try2.jpg" />
+          <img className="profile" src="/src/assets/logos/IMG_3817.png" />
         </div>
         <Skills />
         <div className="content" id="projects">
@@ -111,9 +119,8 @@ export const App = () => {
               description="This was my 2023 Serve project which I worked on until 2024"
               imageUrl="fa-solid fa-user-doctor"
               imageSrc={"/src/assets/logos/ASPA.png"}
-              link={"https://github.com/tedydevmac/aspa.git"}
               github={"https://github.com/tedydevmac/aspa.git"}
-              iconHover={true}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
@@ -126,9 +133,8 @@ export const App = () => {
               description="This was my 2024 Serve project which I am still currently working on"
               imageUrl="fa-solid fa-school"
               imageSrc={"/src/assets/logos/virtualtour.png"}
-              link={"https://github.com/tedydevmac/virtualtour.git"}
               github={"https://github.com/tedydevmac/virtualtour.git"}
-              iconHover={true}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
@@ -158,11 +164,10 @@ export const App = () => {
               description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/src/assets/logos/sstinc.png"}
-              link={"https://github.com/tedydevmac/sstinccamp2024hackathon.git"}
               github={
                 "https://github.com/tedydevmac/sstinccamp2024hackathon.git"
               }
-              iconHover={true}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
@@ -179,7 +184,7 @@ export const App = () => {
               tooBig={false}
               singleImage={false}
               images={["/src/assets/logos/RAYdar.png"]}
-              title="RAYdar - SUTD What The Hack 2024"
+              title="SUTD What The Hack 2024"
               description="An AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups"
               imageUrl="fa-brands fa-chrome"
               imageSrc={"/src/assets/logos/RAYdar.png"}
@@ -233,7 +238,7 @@ export const App = () => {
               images={["/src/assets/logos/noi.jpeg"]}
               title={"National Olympiad in Informatics (NOI) 2025"}
               description={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "Obtained Participation. My first NOI competition."
               }
               imageUrl={"fa-solid fa-computer"}
               imageSrc={"/src/assets/logos/noi.jpeg"}
@@ -246,9 +251,28 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={true}
+              images={["/src/assets/logos/sg60portal.png"]}
+              title={"SP National Software Competition 2025"}
+              description={
+                "Won 1st place. A SG60 Portal app, all-in-one platform for SG60 related matters."
+              }
+              imageUrl={"fa-brands fa-app-store-ios"}
+              imageSrc={"/src/assets/logos/sg60portal.png"}
+              link={"https://devpost.com/software/sg60portal"}
+              github={"https://github.com/tedydevmac/SP_NSComp.git"}
+              iconHover={true}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={true}
               images={["/src/assets/perse/persecc.png"]}
               title={"Perse Coding Challenge 2023 - 2025"}
-              description={"Won Distinction - Best in School award in 2023"}
+              description={
+                "Won Distinction - Best in School award in 2023, Won Distinction in 2025 "
+              }
               imageUrl={"fa-solid fa-terminal"}
               imageSrc={"/src/assets/logos/persecc.jpg"}
               link={"https://pctc.perse.co.uk/"}
@@ -267,8 +291,7 @@ export const App = () => {
               }
               imageUrl={"fa-solid fa-robot"}
               imageSrc={"/src/assets/logos/sst.png"}
-              iconHover={true}
-              link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
+              iconHover={false}
               github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -307,9 +330,8 @@ export const App = () => {
               description="A Telegram bot to assist students in their school work management"
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/src/assets/logos/telegram.webp"}
-              link={"https://github.com/tedydevmac/studenthelp.git"}
               github={"https://github.com/tedydevmac/studenthelp.git"}
-              iconHover={true}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
@@ -324,7 +346,22 @@ export const App = () => {
               imageSrc={"/src/assets/logos/python.png"}
               link={"https://github.com/tedydevmac/S3T3CPPT.git"}
               github={"https://github.com/tedydevmac/S3T3CPPT.git"}
-              iconHover={true}
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/src/assets/logos/python.png"]}
+              title="Virtual Photobooth - S4 Computing+ Coursework "
+              description="This project focuses on detecting and classifying cyberbullying in text, particularly against the LGBTQ community and minority groups."
+              imageUrl="fa-solid fa-brain"
+              imageSrc={"/src/assets/logos/python.png"}
+              link={"https://github.com/tedydevmac/py-photobooth.git"}
+              github={"https://github.com/tedydevmac/py-photobooth.git"}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
@@ -337,9 +374,8 @@ export const App = () => {
               description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
               imageUrl="fa-solid fa-dumbbell"
               imageSrc={"/src/assets/logos/sst.png"}
-              link={"https://github.com/tedydevmac/innofest-app.git"}
               github={"https://github.com/tedydevmac/innofest-app.git"}
-              iconHover={true}
+              iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }

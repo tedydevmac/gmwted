@@ -1,5 +1,12 @@
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .home {
@@ -11,6 +18,7 @@ html {
   padding: 40px 160px;
   position: relative;
   width: 1920px;
+  overflow: hidden; /* Add this line */
 }
 
 .home .main {
@@ -181,4 +189,9 @@ html {
   text-decoration: none; /* Remove underline */
   height: 56px; /* Set a fixed height */
   width: 56px; /* Set a fixed width */
+}
+
+.icons:hover {
+  transform: translateY(-2.5px); /* Move up more on hover */
+  color: #ffffff;
 }
