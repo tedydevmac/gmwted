@@ -24,7 +24,11 @@ export const Card = ({
     <div className={`card ${isExpanded ? "expanded" : ""}`}>
       {isExpanded ? (
         singleImage ? (
-          <img src={images[0]} alt={imageSrc} className={`img single`}></img>
+          <img
+            src={`/_vercel/image?url=${images[0]}`}
+            alt={imageSrc}
+            className={`img single`}
+          ></img>
         ) : (
           <Carousel
             className={`image extend`}
@@ -41,7 +45,7 @@ export const Card = ({
             {images.map((imgSrc, index) => (
               <div key={index}>
                 <img
-                  src={imgSrc}
+                  src={`/_vercel/image?url=${imgSrc}`}
                   alt={imageSrc}
                   className={`img ${tooBig ? "scaledown" : ""}`}
                 />
@@ -57,7 +61,7 @@ export const Card = ({
           rel="noopener noreferrer"
         >
           <img
-            src={imageSrc}
+            src={`/_vercel/image?url=${imageSrc}`}
             className={`img ${iconHover ? "hover-enabled" : ""}`}
           />
         </a>
