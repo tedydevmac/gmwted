@@ -83,7 +83,7 @@ export const App = () => {
           </div>
           <img
             className="profile"
-            src="/_vercel/image?url=/static/logos/IMG_3817.png"
+            src="/_vercel/image?url=/static/logos/IMG_3817.png&w=200&q=70"
           />
         </div>
         <Skills />
