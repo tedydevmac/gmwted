@@ -7,7 +7,9 @@ import { Card } from "./components/Card/Card";
 import { Notice } from "./components/Notice/Notice";
 import { Contact } from "./components/Contact/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useEffect } from "react";
+import Experience from "./components/Experience/Experience";
+import { ExperienceButton } from "./components/Experience/ExperienceControl";
+
 export const App = () => {
   return (
     <div className="home" id="home">
@@ -83,6 +85,17 @@ export const App = () => {
             </p>
           </div>
           <img className="profile" src="/assets/logos/IMG_3817.png" />
+        </div>
+        <div className="content" id="experiences">
+          <div className="title">
+            <div className="text-wrapper-6">Experiences</div>
+          </div>
+          <div className={"experience-control-row"}>
+            <ExperienceButton title={"#Project SF"} />
+            <ExperienceButton title={"SST x BBS IDP IEP"} />
+            <ExperienceButton title={"LABB"} />
+          </div>
+          <Experience title={"Experience"} imgSrc={"vite.svg"} />
         </div>
         <Notice />
         <div className="content" id="projects">

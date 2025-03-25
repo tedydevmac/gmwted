@@ -196,3 +196,10 @@ html::-webkit-scrollbar {
   transform: translateY(-2.5px); /* Move up more on hover */
   color: #ffffff;
 }
+.experience-control-row {
+  display: flex;
+  width: 1480px;
+  padding: 40px 0px 40px 58px;
+  align-items: flex-start;
+  gap: 16px;
+}
