@@ -7,7 +7,8 @@ import { Card } from "./components/Card/Card";
 import { Notice } from "./components/Notice/Notice";
 import { Contact } from "./components/Contact/Contact";
 import Progress from "./components/Progress/Progress";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useEffect } from "react";
 export const App = () => {
   return (
     <div className="home" id="home">
@@ -388,6 +389,7 @@ export const App = () => {
       </div>
       <Sidebar className="navigation" />
       <Progress />
+      <SpeedInsights />
     </div>
   );
 };
