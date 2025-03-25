@@ -169,7 +169,7 @@ html::-webkit-scrollbar {
 .home .profile {
   height: 27.5%;
   width: 27.5%;
-  border-radius: 35%;
+  border-radius: 45%;
   margin-right: 7.5%;
 }
 .first {
@@ -181,6 +181,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   gap: 1px;
+  margin-top: 1.75%;
 }
 
 .icons {

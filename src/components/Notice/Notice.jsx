@@ -1,10 +1,10 @@
-import "./Skills.css";
+import "./Notice.css";
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 
-export const Skills = () => {
+export const Notice = () => {
   return (
-    <div className="callout">
+    <div className="callout" id="notice">
       <div className="toprow">
         <i className="infoicon fa-solid fa-circle-info"></i>
         <text className="notice">Notice</text>

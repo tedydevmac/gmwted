@@ -4,8 +4,9 @@ import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import "./App.css";
 import { Card } from "./components/Card/Card";
-import { Skills } from "./components/Skills/Skills";
+import { Notice } from "./components/Notice/Notice";
 import { Contact } from "./components/Contact/Contact";
+import Progress from "./components/Progress/Progress";
 
 export const App = () => {
   return (
@@ -83,7 +84,7 @@ export const App = () => {
           </div>
           <img className="profile" src="/assets/logos/IMG_3817.png" />
         </div>
-        <Skills />
+        <Notice />
         <div className="content" id="projects">
           <div className="title">
             <div className="text-wrapper-6">SST Inc</div>
@@ -386,6 +387,7 @@ export const App = () => {
         <Footer className="footer-instance" />
       </div>
       <Sidebar className="navigation" />
+      <Progress />
     </div>
   );
 };
