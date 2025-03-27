@@ -30,7 +30,7 @@
   z-index: 1;
 }
 .icon-link {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.25s ease-in-out;
   margin: 5px 0; /* Space between icons */
   font-size: 25px; /* Adjust the size of the icons */
   color: #656a7b; /* Icon color */

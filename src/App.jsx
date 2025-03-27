@@ -95,7 +95,20 @@ export const App = () => {
             <ExperienceButton title={"SST x BBS IDP IEP"} />
             <ExperienceButton title={"LABB"} />
           </div>
-          <Experience title={"Experience"} imgSrc={"vite.svg"} />
+          <Experience
+            title={"#Project SF"}
+            desc={
+              "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco."
+            }
+            imgSrc={[
+              "assets/projectsf/1.jpg",
+              "assets/projectsf/2.jpg",
+              "assets/projectsf/3.jpg",
+              "assets/projectsf/4.png",
+              "assets/projectsf/5.jpg",
+              "assets/projectsf/6.jpg",
+            ]}
+          />
         </div>
         <Notice />
         <div className="content" id="projects">

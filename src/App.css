@@ -221,7 +221,7 @@ html::-webkit-scrollbar {
 .experience-control-row {
   display: flex;
   width: 1480px;
-  padding: 40px 0px 40px 58px;
+  padding: 40px 0px 40px 50px;
   align-items: flex-start;
   gap: 16px;
 }

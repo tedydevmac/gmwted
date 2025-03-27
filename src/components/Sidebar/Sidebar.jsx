@@ -8,6 +8,9 @@ export const Sidebar = ({ className }) => {
         <a href="#home" className="icon-link" data-text="About Me">
           <i className="fas fa-user"></i> {/* Font Awesome icon */}
         </a>
+        <a href="#experiences" className="icon-link" data-text="Experiences">
+          <i className="fa-solid fa-life-ring"></i>{" "}
+        </a>
         <a href="#notice" className="icon-link" data-text="Projects">
           <i className="fa-solid fa-diagram-project"></i>{" "}
         </a>
