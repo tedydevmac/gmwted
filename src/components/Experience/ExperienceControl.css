@@ -31,4 +31,8 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px; /* 142.857% */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
@@ -11,6 +11,78 @@ import Experience from "./components/Experience/Experience";
 import { ExperienceButton } from "./components/Experience/ExperienceControl";
 
 export const App = () => {
+  const [currentExperience, setCurrentExperience] = useState({
+    title: "#Project SF",
+    desc: "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco.",
+    imgSrc: [
+      "assets/projectsf/1.jpg",
+      "assets/projectsf/2.jpg",
+      "assets/projectsf/3.jpg",
+      "assets/projectsf/4.png",
+      "assets/projectsf/5.jpg",
+      "assets/projectsf/6.jpg",
+    ],
+  });
+
+  const experiences = [
+    {
+      title: "#Project SF",
+      desc: "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco.",
+      imgSrc: [
+        "assets/projectsf/1.jpg",
+        "assets/projectsf/2.jpg",
+        "assets/projectsf/3.jpg",
+        "assets/projectsf/4.png",
+        "assets/projectsf/5.jpg",
+        "assets/projectsf/6.jpg",
+      ],
+    },
+    {
+      title: "SST x BBS IDP IEP",
+      desc: "A collaborative project between SST and BBS to foster innovation and entrepreneurship.",
+      imgSrc: ["assets/sstbbs/1.jpg", "assets/sstbbs/2.jpg"],
+    },
+    {
+      title: "LABB",
+      desc: "A hands-on learning experience focused on building and prototyping innovative solutions.",
+      imgSrc: ["assets/labb/1.jpg", "assets/labb/2.jpg"],
+    },
+  ];
+
+  // Define skills with their icons and names
+  const skills = [
+    // Frontend
+    { name: "React", icon: "fa-brands fa-react" },
+    { name: "React Native", icon: "fa-solid fa-mobile-alt" },
+    { name: "JavaScript", icon: "fa-brands fa-js" },
+    { name: "TypeScript", icon: "fa-solid fa-code" },
+    { name: "HTML5", icon: "fa-brands fa-html5" },
+    { name: "CSS3", icon: "fa-brands fa-css3-alt" },
+    { name: "Flutter", icon: "fa-solid fa-mobile-screen" },
+    { name: "Dart", icon: "fa-solid fa-bullseye" },
+
+    // Backend & Languages
+    { name: "Python", icon: "fa-brands fa-python" },
+    { name: "C++", icon: "fa-solid fa-code" },
+    { name: "Django", icon: "fa-solid fa-sitemap" },
+    { name: "Flask", icon: "fa-solid fa-flask" },
+    { name: "Node.js", icon: "fa-brands fa-node-js" },
+    { name: "MongoDB", icon: "fa-solid fa-database" },
+
+    // Data Science & AI
+    { name: "NumPy", icon: "fa-solid fa-calculator" },
+    { name: "TensorFlow", icon: "fa-solid fa-brain" },
+    { name: "OpenCV", icon: "fa-solid fa-camera" },
+
+    // DevOps & Tools
+    { name: "Firebase", icon: "fa-solid fa-fire" },
+    { name: "Git", icon: "fa-brands fa-git-alt" },
+    { name: "GitHub", icon: "fa-brands fa-github" },
+
+    // Hardware & IoT
+    { name: "Arduino", icon: "fa-solid fa-microchip" },
+  ];
+
   return (
     <div className="home" id="home">
       <div className="main">
@@ -86,28 +158,56 @@ export const App = () => {
           </div>
           <img className="profile" src="/assets/logos/IMG_3817.png" />
         </div>
+
+        {/* Skills Section */}
+        <div className="content" id="skills">
+          <div className="title">
+            <div className="text-wrapper-6">Tech Stack</div>
+          </div>
+          <div className="skills-container">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="skill-item"
+                style={{
+                  animationDelay: `${index * 0.05}s`,
+                  // Add subtle category-based color hints
+                  borderTop:
+                    index < 8
+                      ? "2px solid rgba(97, 218, 251, 0.7)" // Frontend - React color
+                      : index < 14
+                      ? "2px solid rgba(83, 168, 220, 0.7)" // Backend - Django/Flask blue
+                      : index < 17
+                      ? "2px solid rgba(255, 183, 77, 0.7)" // Data Science - TensorFlow orange
+                      : index < 20
+                      ? "2px solid rgba(110, 220, 156, 0.7)" // DevOps - green
+                      : "2px solid rgba(255, 102, 102, 0.7)", // Hardware & IoT - red
+                }}
+              >
+                <i className={`${skill.icon} skill-icon`}></i>
+                <p className="skill-name">{skill.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="content" id="experiences">
           <div className="title">
             <div className="text-wrapper-6">Experiences</div>
           </div>
           <div className={"experience-control-row"}>
-            <ExperienceButton title={"#Project SF"} />
-            <ExperienceButton title={"SST x BBS IDP IEP"} />
-            <ExperienceButton title={"LABB"} />
+            {experiences.map((exp, index) => (
+              <ExperienceButton
+                key={index}
+                title={exp.title}
+                onClick={() => setCurrentExperience(exp)}
+              />
+            ))}
           </div>
           <Experience
-            title={"#Project SF"}
-            desc={
-              "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco."
-            }
-            imgSrc={[
-              "assets/projectsf/1.jpg",
-              "assets/projectsf/2.jpg",
-              "assets/projectsf/3.jpg",
-              "assets/projectsf/4.png",
-              "assets/projectsf/5.jpg",
-              "assets/projectsf/6.jpg",
-            ]}
+            title={currentExperience.title}
+            desc={currentExperience.desc}
+            imgSrc={currentExperience.imgSrc}
           />
         </div>
         <Notice />
@@ -117,6 +217,22 @@ export const App = () => {
           </div>
 
           <div className="column">
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/assets/logos/sstinc.png"]}
+              title="SST Inc Application of the Year Champion 2024"
+              description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
+              imageUrl="fa-brands fa-telegram"
+              imageSrc={"/assets/logos/sstinc.png"}
+              github={
+                "https://github.com/tedydevmac/sstinccamp2024hackathon.git"
+              }
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
             <Card
               images={[
                 "/assets/OH2024/OHMain.PNG",
@@ -209,6 +325,40 @@ export const App = () => {
           <div className="column">
             <Card
               tooBig={false}
+              singleImage={true}
+              images={["/assets/logos/sg60portal.png"]}
+              title={"SP National Software Competition 2025"}
+              description={
+                "Won 1st place. A SG60 Portal app, all-in-one platform for SG60 related matters."
+              }
+              imageUrl={"fa-brands fa-app-store-ios"}
+              imageSrc={"/assets/logos/sg60portal.png"}
+              link={"https://devpost.com/software/sg60portal"}
+              github={"https://github.com/tedydevmac/SP_NSComp.git"}
+              iconHover={true}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/assets/logos/astrigues.png"]}
+              title={"Raffles Astronomy Astrigue' 24 Nocturne"}
+              description={
+                "Won 3rd place overall in the competition with my team"
+              }
+              imageUrl={"fa-solid fa-earth-europe"}
+              imageSrc={"/assets/logos/astrigue.png"}
+              link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
+              github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
               singleImage={false}
               images={["/assets/logos/RAYdar.png"]}
               title="SUTD What The Hack 2024"
@@ -242,23 +392,7 @@ export const App = () => {
                 "This was my first ever external competitive CTF competition that I have joined. \nI had done CTFs before in school hosted by SST Inc, but those had more beginner level questions. The questions I encountered were MUCH more difficult. \nLuckily, I had attended their training beforehand and I was able to solve a surpising amount of questions with the help of my teammates. Unfortuantely, despite our best efforts, we only managed to reach the top 30 teams and did not make it to the finals. However, I think it was still a good learning experience in the area of cybersecurity."
               }
             />
-            <Card
-              tooBig={false}
-              singleImage={false}
-              images={["/assets/logos/astrigues.png"]}
-              title={"Raffles Astronomy Astrigue' 24 Nocturne"}
-              description={
-                "Won 3rd place overall in the competition with my team"
-              }
-              imageUrl={"fa-solid fa-earth-europe"}
-              imageSrc={"/assets/logos/astrigue.png"}
-              link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
-              github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
-              iconHover={false}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
+
             <Card
               tooBig={false}
               singleImage={true}
@@ -273,23 +407,7 @@ export const App = () => {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
             />
-            <Card
-              tooBig={false}
-              singleImage={true}
-              images={["/assets/logos/sg60portal.png"]}
-              title={"SP National Software Competition 2025"}
-              description={
-                "Won 1st place. A SG60 Portal app, all-in-one platform for SG60 related matters."
-              }
-              imageUrl={"fa-brands fa-app-store-ios"}
-              imageSrc={"/assets/logos/sg60portal.png"}
-              link={"https://devpost.com/software/sg60portal"}
-              github={"https://github.com/tedydevmac/SP_NSComp.git"}
-              iconHover={true}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
+
             <Card
               tooBig={false}
               singleImage={true}
@@ -306,11 +424,19 @@ export const App = () => {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
             />
+          </div>
+        </div>
+        <div className="content">
+          <div className="title">
+            <div className="text-wrapper-6">School Events / Projects</div>
+          </div>
+
+          <div className="column">
             <Card
               tooBig={false}
               singleImage={false}
               images={["/assets/logos/sst.png"]}
-              title={"SUTD-SST-NP Big-D Camp 2025"}
+              title={"IDP Integrated Design Challenge 2025"}
               description={
                 "A 3-day camp where we worked on building a remote controlled robot for post disaster debris management"
               }
@@ -326,7 +452,23 @@ export const App = () => {
               tooBig={false}
               singleImage={false}
               images={["/assets/logos/sst.png"]}
-              title={"ARTC-SST Innovation Camp 2024"}
+              title={"IDP SUTD-SST-NP Big-D Camp 2025"}
+              description={
+                "A 3-day camp where we worked on building a remote controlled robot for post disaster debris management"
+              }
+              imageUrl={"fa-solid fa-robot"}
+              imageSrc={"/assets/logos/sst.png"}
+              iconHover={false}
+              github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/assets/logos/sst.png"]}
+              title={"IDP ARTC-SST Innovation Camp 2024"}
               description={
                 "An innovation camp where we worked on a IoT-enabled hydroponics system to boost plant growth. Won Most Environmentally Sustainable Award."
               }
@@ -334,28 +476,6 @@ export const App = () => {
               imageSrc={"/assets/logos/sst.png"}
               link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
               github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
-              iconHover={false}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
-            />
-          </div>
-        </div>
-        <div className="content">
-          <div className="title">
-            <div className="text-wrapper-6">Projects / School Events</div>
-          </div>
-
-          <div className="column">
-            <Card
-              tooBig={false}
-              singleImage={false}
-              images={["/assets/logos/telegram.webp"]}
-              title="Student Helper AI Bot - ARTC-SST Innovation Camp"
-              description="A Telegram bot to assist students in their school work management"
-              imageUrl="fa-brands fa-telegram"
-              imageSrc={"/assets/logos/telegram.webp"}
-              github={"https://github.com/tedydevmac/studenthelp.git"}
               iconHover={false}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -394,8 +514,37 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
+              ß
+              images={["/assets/logos/telegram.webp"]}
+              title="Student Helper AI Bot - ARTC-SST Innovation Pre-amp"
+              description="A Telegram bot to assist students in their school work management"
+              imageUrl="fa-brands fa-telegram"
+              imageSrc={"/assets/logos/telegram.webp"}
+              github={"https://github.com/tedydevmac/studenthelp.git"}
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
               images={["/assets/logos/sst.png"]}
               title="WorkBud - S2 ChangeMakers Project"
+              description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
+              imageUrl="fa-solid fa-dumbbell"
+              imageSrc={"/assets/logos/sst.png"}
+              github={"https://github.com/tedydevmac/innofest-app.git"}
+              iconHover={false}
+              expanddesc={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
+            <Card
+              tooBig={false}
+              singleImage={false}
+              images={["/assets/logos/sst.png"]}
+              title="S1 ChangeMakers InnoScience Challenge"
               description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
               imageUrl="fa-solid fa-dumbbell"
               imageSrc={"/assets/logos/sst.png"}
