@@ -5,25 +5,33 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome C
 export const Contact = ({}) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
   function onSubmit(e) {
     e.preventDefault();
     e.stopPropagation();
+    
+    // Reset states
+    setError("");
+    setSubmitted(false);
+    
     fetch("https://formcarry.com/s/FHe5ZDWrwzW", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, message }),
+      body: JSON.stringify({ email, message }),
     })
       .then((response) => response.json())
       .then((response) => {
         if (response.code === 200) {
-          alert("We received your submission, thank you!");
+          setSubmitted(true);
+          setEmail("");
+          setMessage("");
+          // Clear the success message after 5 seconds
+          setTimeout(() => setSubmitted(false), 5000);
         } else if (response.code === 422) {
           // Field validation failed
           setError(response.message);
@@ -40,7 +48,7 @@ export const Contact = ({}) => {
 
   return (
     <div className="contactbox" id="contact">
-      <text className="contacttitle">Contact Me</text>
+      <div className="contacttitle">Contact Me</div>
       <form onSubmit={(e) => onSubmit(e)} className="formarea">
         <label htmlFor="email" className="contactpara">
           Email
@@ -51,6 +59,7 @@ export const Contact = ({}) => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder="your@email.com"
           required
         />
 
@@ -62,15 +71,20 @@ export const Contact = ({}) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="textarea"
+          placeholder="Write your message here..."
         />
+        
+        {error && <div className="error-message">{error}</div>}
+        {submitted && <div className="success-message">Message sent successfully!</div>}
+        
+        <button
+          type="submit"
+          className="submitbutton"
+          onClick={(e) => onSubmit(e)}
+        >
+          <i className="fas fa-paper-plane"></i> Send Message
+        </button>
       </form>
-      <button
-        type="submit"
-        className="submitbutton"
-        onClick={(e) => onSubmit(e)}
-      >
-        Send
-      </button>
     </div>
   );
 };

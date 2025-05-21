@@ -24,7 +24,14 @@ export const Card = ({
     <div className={`card ${isExpanded ? "expanded" : ""}`}>
       {isExpanded ? (
         singleImage ? (
-          <img src={images[0]} alt={imageSrc} className={`img single`}></img>
+          <div className="single-image-container">
+            <img
+              src={images[0]}
+              alt={imageSrc}
+              className={`img single`}
+              loading="lazy"
+            ></img>
+          </div>
         ) : (
           <Carousel
             className={`image extend`}
@@ -39,11 +46,12 @@ export const Card = ({
             showStatus={false}
           >
             {images.map((imgSrc, index) => (
-              <div key={index}>
+              <div key={index} className="carousel-image-container">
                 <img
                   src={imgSrc}
                   alt={imageSrc}
                   className={`img ${tooBig ? "scaledown" : ""}`}
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -58,7 +66,7 @@ export const Card = ({
         >
           <img
             src={imageSrc}
-            className={`img ${iconHover ? "hover-enabled" : ""}`}
+            className={`img ${iconHover ? "hover-enabled" : "round-rectangle"}`}
           />
         </a>
       )}

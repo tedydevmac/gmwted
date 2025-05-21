@@ -1,73 +1,146 @@
 .contactbox {
   backdrop-filter: blur(12px);
-
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04),
     0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  background  : radial-gradient(
-    100% 100% at 0% 50%,
+  border-radius: 40px;
+  border: 1px solid #fff;
+  background: radial-gradient(
+    100% 100% at 50% 0%,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0.02) 100%
   );
   width: 95%;
   height: 100%;
-  padding-left: 2%;
-  padding-right: 1.5%;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   gap: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .contacttitle {
-  font-family: Inter;
-  font-size: 35px;
+  font-family: Inter, sans-serif;
+  font-size: 40px;
   font-style: normal;
   font-weight: 600;
   user-select: none;
-  color: var(--Adaptive-Medium, rgba(255, 255, 255, 0.8));
+  color: var(--Adaptive-Medium, rgba(255, 255, 255, 0.9));
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
 }
 .formarea {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
   width: 100%;
 }
 .contactpara {
-  color: var(--Adaptive-Weak, rgba(255, 255, 255, 0.6));
+  color: var(--Adaptive-Weak, rgba(255, 255, 255, 0.7));
   line-height: 1.5;
-  font-family: Inter;
-  font-size: 21px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   user-select: none;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
 }
 .textarea {
   width: 100%;
   height: 200px;
-  background-color: #ededed;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   justify-content: center;
-  border-radius: 20px;
-  padding: 1%;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  resize: none;
+  outline: none;
 }
+
+.textarea:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
 .textarea.email {
-  width: 30%;
-  height: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
 }
 .submitbutton {
-  border-radius: 10px;
-  background-color: #3a6351;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(33, 99, 177, 0.9) 0%,
+    rgba(33, 99, 177, 0.7) 100%
+  );
   color: white;
-  width: 20%;
-  height: 100%;
-  font-family: Inter;
-  font-size: 20px;
+  width: auto;
+  min-width: 150px;
+  height: auto;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   user-select: none;
-  padding: 1%;
+  padding: 12px 24px;
   margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submitbutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(33, 99, 177, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(33, 99, 177, 1) 0%,
+    rgba(33, 99, 177, 0.8) 100%
+  );
+}
+
+.error-message {
+  color: #ff355e;
+  background-color: rgba(255, 53, 94, 0.1);
+  border: 1px solid rgba(255, 53, 94, 0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-message {
+  color: #4ade80;
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
