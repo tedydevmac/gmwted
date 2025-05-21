@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Experience from "./components/Experience/Experience";
 import { ExperienceButton } from "./components/Experience/ExperienceControl";
+import InternshipCard from "./components/Internship/InternshipCard";
 
 export const App = () => {
   const [currentExperience, setCurrentExperience] = useState({
@@ -46,6 +47,34 @@ export const App = () => {
       title: "LABB",
       desc: "A hands-on learning experience focused on building and prototyping innovative solutions.",
       imgSrc: ["assets/labb/1.jpg", "assets/labb/2.jpg"],
+    },
+  ];
+
+  const internships = [
+    {
+      title: "Hyundai Motor Group Innovation Center Singapore",
+      period: "August 2024",
+      company: "Hyundai",
+      description:
+        "Saw in person the advancements in manufacturing automation and robotics, learned about what's it like to work at HMGICS",
+      technologies: [
+        "Project Management",
+        "Presentation Skills",
+        "Collaboration",
+        "Critical Thinking",
+      ],
+      imgSrc:
+        "https://static.vecteezy.com/system/resources/previews/020/500/331/non_2x/hyundai-logo-brand-symbol-with-name-blue-design-south-korean-car-automobile-illustration-free-vector.jpg",
+    },
+    {
+      title: "Capstone Project with Affinidi",
+      period: "Jan 2025 - Nov 2025",
+      company: "Affinidi",
+      description:
+        "Using Affinidi's tools to build a mobile app for verifiable student reputation.",
+      technologies: ["React Native", "Node.js", "Typescript", "HTML", "CSS"],
+      imgSrc:
+        "https://yt3.googleusercontent.com/QfTzb2BlKvN_4dSki3lsX3t2extFeV1ZsXxMQTES5HGmAf2Y5b_LbZ8fVxbbifkcHx0TXvevyA=s900-c-k-c0x00ffffff-no-rj",
     },
   ];
 
@@ -210,6 +239,27 @@ export const App = () => {
             imgSrc={currentExperience.imgSrc}
           />
         </div>
+
+        <div className="content" id="internships">
+          <div className="title">
+            <div className="text-wrapper-6">Work</div>
+          </div>
+          <div className="internships-container">
+            {internships.map((internship, index) => (
+              <InternshipCard
+                key={index}
+                title={internship.title}
+                period={internship.period}
+                company={internship.company}
+                description={internship.description}
+                technologies={internship.technologies}
+                imgSrc={internship.imgSrc}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+
         <Notice />
         <div className="content" id="projects">
           <div className="title">

@@ -195,7 +195,7 @@ html::-webkit-scrollbar {
 }
 
 .home .navigation {
-  height: 300px;
+  height: 337.5px;
   left: 71px;
   position: fixed;
   top: 61px;
@@ -339,4 +339,71 @@ html::-webkit-scrollbar {
 
 .skill-item:hover .skill-name {
   color: #1a4c8a;
+}
+
+/* Internships Section Styles */
+.internships-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.internship-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(0.1s * var(--index, 0));
+  opacity: 0;
+}
+
+/* Responsive styles for internships section */
+@media screen and (max-width: 768px) {
+  .internships-container {
+    padding: 0 10px;
+  }
+
+  .internship-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .internship-logo-container {
+    margin-bottom: 15px;
+  }
+
+  .tech-tags {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .internship-title {
+    font-size: 18px;
+  }
+
+  .internship-subtitle {
+    font-size: 14px;
+  }
+
+  .internship-description {
+    font-size: 14px;
+  }
+
+  .tech-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
 }
