@@ -297,7 +297,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/sstinc.png"]}
               title="SST Inc Application of the Year Champion 2024"
-              description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
+              description="Won this award due to the creations of our various well performing apps. We were selected for ProjectSF due to this."
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/assets/logos/sstinc.png"}
               github={
@@ -314,8 +314,8 @@ export const App = () => {
                 "/assets/OH2024/OHAndroid.jpeg",
                 "/assets/OH2024/OHIOS.PNG",
               ]}
-              title="SST Open House App 2024 (IOS/Android)"
-              description="I am one of the lead developers for this app which was used during SST's Open House event."
+              title="SST Open House App 2024/2025 (IOS,Android)"
+              description="I was one of the lead developers for this app which was used during SST's Open House event to engage visitors and provide information about the school."
               imageUrl="fa-solid fa-door-open"
               imageSrc={"/assets/logos/SSTOH2024.png"}
               link={
@@ -333,8 +333,8 @@ export const App = () => {
               tooBig={false}
               singleImage={false}
               images={["/assets/logos/ASPA.png"]}
-              title="ASPA (IOS/Android)"
-              description="This was my 2023 Serve project which I worked on until 2024"
+              title="ASPA (IOS,Android)"
+              description="ASPA aims to centralise medical resources for doctors working under Asean Society of Paediatric Anaesthesiologists. It includes tools to calculate drug dosages, contain important medical information, and quick reference materials. My Project Serve for 2023-2024."
               imageUrl="fa-solid fa-user-doctor"
               imageSrc={"/assets/logos/ASPA.png"}
               github={"https://github.com/tedydevmac/aspa.git"}
@@ -348,7 +348,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/virtualtour.png"]}
               title="SST Virtual Tour (Web)"
-              description="This was my 2024 Serve project which I am still currently working on"
+              description="This website lets potential students and parents explore the school and its facilities through a 360 degree tour. My 2024 Serve Project"
               imageUrl="fa-solid fa-school"
               imageSrc={"/assets/logos/virtualtour.png"}
               github={"https://github.com/tedydevmac/virtualtour.git"}
@@ -362,7 +362,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/sstannouncer.png"]}
               title="SST Announcer (Android)"
-              description="As a volunteer, I helped add new features to the app and improved its UI during its revamp in 2023"
+              description="As a volunteer, I helped add new features and improved its UI during its revamp in 2023. This app is used by all students in SST to receive school-wide announcements and events."
               imageUrl="fa-solid fa-school"
               imageSrc={"/assets/logos/sstannouncer.png"}
               link={
@@ -412,7 +412,7 @@ export const App = () => {
               images={["/assets/logos/sg60portal.png"]}
               title={"SP National Software Competition 2025"}
               description={
-                "Won 1st place. A SG60 Portal app, all-in-one platform for SG60 related matters."
+                "Won 1st place overall. My team and I created: SG60 Portal App, an all-in-one one-stop platform for SG60 related matters, targeted towards the general public."
               }
               imageUrl={"fa-brands fa-app-store-ios"}
               imageSrc={"/assets/logos/spnsc.png"}
@@ -425,26 +425,11 @@ export const App = () => {
             />
             <Card
               tooBig={false}
-              singleImage={true}
-              images={["/assets/logos/buildingblocs.svg"]}
-              title={"BuildingBloCS 2025"}
-              description={
-                "Made AI models to improve accessiblity for the deaf and blind, bundled in an app for everyday use"
-              }
-              imageUrl={"fa-solid fa-universal-access"}
-              imageSrc={"/assets/logos/buildingblocs.png"}
-              iconHover={false}
-              expanddesc={
-                "Made AI models to improve accessiblity for the deaf and blind, bundled in an App for everyday use. BuildingBloCS is a hackathon focused on accessibility and inclusivity."
-              }
-            />
-            <Card
-              tooBig={false}
               singleImage={false}
               images={["/assets/logos/astrigues.png"]}
               title={"Raffles Astronomy Astrigue' 24 Nocturne"}
               description={
-                "Won 3rd place overall in the competition with my team"
+                "Won 3rd place overall. A competition where we were tested on our knowledge regarding Astronomy and Space Science."
               }
               imageUrl={"fa-solid fa-earth-europe"}
               imageSrc={"/assets/logos/astrigue.png"}
@@ -457,10 +442,25 @@ export const App = () => {
             />
             <Card
               tooBig={false}
+              singleImage={true}
+              images={["/assets/logos/buildingblocs.svg"]}
+              title={"BuildingBloCS 2025"}
+              description={
+                "Created Computer Vision models to improve accessiblity for the deaf and blind to help them better navigate this world, bundled in an app for everyday use."
+              }
+              imageUrl={"fa-solid fa-universal-access"}
+              imageSrc={"/assets/logos/buildingblocs.png"}
+              iconHover={false}
+              expanddesc={
+                "Made AI models to improve accessiblity for the deaf and blind, bundled in an App for everyday use. BuildingBloCS is a hackathon focused on accessibility and inclusivity."
+              }
+            />
+            <Card
+              tooBig={false}
               singleImage={false}
               images={["/assets/logos/sutdwth.png"]}
               title="SUTD What The Hack 2024"
-              description="An AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups"
+              description="For this hackathon, we built an AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups."
               imageUrl="fa-brands fa-chrome"
               imageSrc={"/assets/logos/sutdwth.png"}
               link={"https://devpost.com/software/raydar-8dh1xi"}
@@ -473,7 +473,7 @@ export const App = () => {
             <Card
               title={"BlahajCTF 2024"}
               description={
-                "My first external CTF competition I joined alongside my friends"
+                "This was my first CTF experience. It was an online competition where we spent all day solving cybersecurity-related problems to gather as many points as possible."
               }
               imageUrl={"fa-solid fa-flag"}
               imageSrc={"/assets/logos/blahajctf.png"}
@@ -512,7 +512,7 @@ export const App = () => {
               images={["/assets/persecc.png"]}
               title={"Perse Coding Challenge 2023 - 2025"}
               description={
-                "Won Distinction - Best in School award in 2023, Won Distinction in 2025 "
+                "Won Distinction - Best in School award in 2023, Won Distinction in 2025"
               }
               imageUrl={"fa-solid fa-terminal"}
               imageSrc={"/assets/logos/persecc.jpg"}
@@ -545,7 +545,7 @@ export const App = () => {
               images={["/assets/logos/sst.png"]}
               title={"IDP Integrated Design Challenge 2025"}
               description={
-                "A 3-day camp where we worked on building a remote controlled robot for post disaster debris management"
+                "A challenge where we had to create an autonomous robot vehicle that uses computer vision to transport food."
               }
               imageUrl={"fa-solid fa-robot"}
               imageSrc={"/assets/logos/sst.png"}
@@ -561,7 +561,7 @@ export const App = () => {
               images={["/assets/logos/sst.png"]}
               title={"IDP SUTD-SST-NP Big-D Camp 2025"}
               description={
-                "A 3-day camp where we worked on building a remote controlled robot for post disaster debris management"
+                "A 3-day camp where we worked on building a remote controlled robot for post disaster debris management."
               }
               imageUrl={"fa-solid fa-robot"}
               imageSrc={"/assets/logos/sst.png"}
@@ -577,7 +577,7 @@ export const App = () => {
               images={["/assets/logos/sst.png"]}
               title={"IDP ARTC-SST Innovation Camp 2024"}
               description={
-                "An innovation camp where we worked on a IoT-enabled hydroponics system to boost plant growth. Won Most Environmentally Sustainable Award."
+                "An innovation camp where my team and I developed an IoT-enabled hydroponics system to boost plant growth. Won Most Environmentally Sustainable Award."
               }
               imageUrl={"fa-solid fa-gear"}
               imageSrc={"/assets/logos/sst.png"}
@@ -608,7 +608,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/python.png"]}
               title="Virtual Photobooth - S4 Computing+ Coursework "
-              description="This project focuses on detecting and classifying cyberbullying in text, particularly against the LGBTQ community and minority groups."
+              description="A virtual photobooth which involved landmarking the face to place virtual props on the user's face, bundled into an interactive experience aimed to serve as a meaningful addition to SST Celebrations."
               imageUrl="fa-solid fa-brain"
               imageSrc={"/assets/logos/python.png"}
               link={"https://github.com/tedydevmac/py-photobooth.git"}
@@ -622,8 +622,8 @@ export const App = () => {
               tooBig={false}
               singleImage={false}
               images={["/assets/logos/telegram.webp"]}
-              title="Student Helper AI Bot - ARTC-SST Innovation Pre-amp"
-              description="A Telegram bot to assist students in their school work management"
+              title="Student Helper AI Bot - ARTC-SST Innovation Pre-camp"
+              description="A Telegram bot to assist students in their school work management. Created during the workshop on creating Telegram bots during the pre-camp."
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/assets/logos/telegram.webp"}
               github={"https://github.com/tedydevmac/studenthelp.git"}
@@ -651,7 +651,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/sst.png"]}
               title="S1 ChangeMakers InnoScience Challenge"
-              description="A self-help application to educate and teach SSTudents how to exercise properly by providing guides and instructions to execute certain common exercises based on muscle group or target group"
+              description="Won Best ICT Award. Created a product powered by sensors to preserve food as long as possible."
               imageUrl="fa-solid fa-dumbbell"
               imageSrc={"/assets/logos/sst.png"}
               github={"https://github.com/tedydevmac/innofest-app.git"}
