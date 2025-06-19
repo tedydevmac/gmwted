@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
@@ -113,6 +113,17 @@ export const App = () => {
     // Hardware & IoT
     { name: "Arduino", icon: "fa-solid fa-microchip" },
   ];
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="home" id="home">
@@ -624,7 +635,7 @@ export const App = () => {
       <div id="footer">
         <Footer className="footer-instance" />
       </div>
-      <Sidebar className="navigation" />
+      {!isMobile && <Sidebar className="navigation" />}
       <SpeedInsights />
     </div>
   );
