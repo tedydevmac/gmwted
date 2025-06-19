@@ -87,8 +87,8 @@ export const App = () => {
     { name: "TypeScript", icon: "fa-solid fa-code" },
     { name: "HTML5", icon: "fa-brands fa-html5" },
     { name: "CSS3", icon: "fa-brands fa-css3-alt" },
-    { name: "Flutter", icon: "fa-solid fa-mobile-screen" },
-    { name: "Dart", icon: "fa-solid fa-bullseye" },
+    { name: "Flutter", icon: "fa-brands fa-flutter" },
+    { name: "Dart", icon: "fa-brands fa-dart-lang" },
 
     // Backend & Languages
     { name: "Python", icon: "fa-brands fa-python" },
@@ -102,6 +102,8 @@ export const App = () => {
     { name: "NumPy", icon: "fa-solid fa-calculator" },
     { name: "TensorFlow", icon: "fa-solid fa-brain" },
     { name: "OpenCV", icon: "fa-solid fa-camera" },
+    { name: "PyTorch", icon: "fa-solid fa-fire-flame-curved" },
+    { name: "Streamlit", icon: "fa-solid fa-water" },
 
     // DevOps & Tools
     { name: "Firebase", icon: "fa-solid fa-fire" },
@@ -158,11 +160,6 @@ export const App = () => {
                 in competitions. <br />I have taught classes on the Flutter
                 framework and have
               </span>
-              <span className="text-wrapper-5">
-                {" "}
-                engaged in several service-learning projects{" "}
-              </span>
-              <span className="text-wrapper-4">as</span>
               <span className="text-wrapper-5">
                 {" "}
                 {"{"}
@@ -238,26 +235,6 @@ export const App = () => {
             desc={currentExperience.desc}
             imgSrc={currentExperience.imgSrc}
           />
-        </div>
-
-        <div className="content" id="internships">
-          <div className="title">
-            <div className="text-wrapper-6">Work</div>
-          </div>
-          <div className="internships-container">
-            {internships.map((internship, index) => (
-              <InternshipCard
-                key={index}
-                title={internship.title}
-                period={internship.period}
-                company={internship.company}
-                description={internship.description}
-                technologies={internship.technologies}
-                imgSrc={internship.imgSrc}
-                index={index}
-              />
-            ))}
-          </div>
         </div>
 
         <Notice />
@@ -392,6 +369,21 @@ export const App = () => {
             />
             <Card
               tooBig={false}
+              singleImage={true}
+              images={["/assets/logos/buildingblocs.png"]}
+              title={"BuildingBloCS 2025"}
+              description={
+                "Made AI models to improve accessiblity for the deaf and blind, bundled in an app for everyday use"
+              }
+              imageUrl={"fa-solid fa-universal-access"}
+              imageSrc={"/assets/logos/buildingblocs.png"}
+              iconHover={false}
+              expanddesc={
+                "Made AI models to improve accessiblity for the deaf and blind, bundled in an App for everyday use. BuildingBloCS is a hackathon focused on accessibility and inclusivity."
+              }
+            />
+            <Card
+              tooBig={false}
               singleImage={false}
               images={["/assets/logos/astrigues.png"]}
               title={"Raffles Astronomy Astrigue' 24 Nocturne"}
@@ -461,7 +453,7 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={true}
-              images={["/assets/perse/persecc.png"]}
+              images={["/assets/persecc.png"]}
               title={"Perse Coding Challenge 2023 - 2025"}
               description={
                 "Won Distinction - Best in School award in 2023, Won Distinction in 2025 "
@@ -476,6 +468,7 @@ export const App = () => {
             />
           </div>
         </div>
+
         <div className="content">
           <div className="title">
             <div className="text-wrapper-6">School Events / Projects</div>
@@ -564,7 +557,6 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              ß
               images={["/assets/logos/telegram.webp"]}
               title="Student Helper AI Bot - ARTC-SST Innovation Pre-amp"
               description="A Telegram bot to assist students in their school work management"
@@ -606,6 +598,27 @@ export const App = () => {
             />
           </div>
         </div>
+
+        <div className="content" id="internships">
+          <div className="title">
+            <div className="text-wrapper-6">Work</div>
+          </div>
+          <div className="internships-container">
+            {internships.map((internship, index) => (
+              <InternshipCard
+                key={index}
+                title={internship.title}
+                period={internship.period}
+                company={internship.company}
+                description={internship.description}
+                technologies={internship.technologies}
+                imgSrc={internship.imgSrc}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+
         <Contact />
       </div>
       <div id="footer">

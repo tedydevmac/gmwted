@@ -28,7 +28,7 @@ export const Card = ({
             <img
               src={images[0]}
               alt={imageSrc}
-              className={`img single`}
+              className={`img single contain`}
               loading="lazy"
             ></img>
           </div>
@@ -50,7 +50,7 @@ export const Card = ({
                 <img
                   src={imgSrc}
                   alt={imageSrc}
-                  className={`img ${tooBig ? "scaledown" : ""}`}
+                  className={`img contain`}
                   loading="lazy"
                 />
               </div>
@@ -66,7 +66,9 @@ export const Card = ({
         >
           <img
             src={imageSrc}
-            className={`img ${iconHover ? "hover-enabled" : "round-rectangle"}`}
+            className={`img ${
+              iconHover ? "hover-enabled" : "round-rectangle contain"
+            }`}
           />
         </a>
       )}

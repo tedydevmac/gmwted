@@ -195,7 +195,7 @@ html::-webkit-scrollbar {
 }
 
 .home .navigation {
-  height: 337.5px;
+  height: 340px;
   left: 71px;
   position: fixed;
   top: 61px;
@@ -270,12 +270,30 @@ html::-webkit-scrollbar {
   width: 110px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-width: 5px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transform-origin: center bottom;
   transform: translateZ(0);
+}
+
+/* Add more obvious borderTop colors for each skill category */
+.skill-item:nth-child(-n + 8) {
+  border-top: 5px solid #00bfff; /* Frontend - bright blue */
+}
+.skill-item:nth-child(n + 9):nth-child(-n + 14) {
+  border-top: 5px solid #0077ff; /* Backend - deep blue */
+}
+.skill-item:nth-child(n + 15):nth-child(-n + 18) {
+  border-top: 5px solid #ff9800; /* Data Science - orange */
+}
+.skill-item:nth-child(n + 19):nth-child(-n + 21) {
+  border-top: 5px solid #43a047; /* DevOps - green */
+}
+.skill-item:nth-child(n + 22) {
+  border-top: 5px solid #e53935; /* Hardware & IoT - red */
 }
 
 .skill-item::before {
@@ -328,7 +346,7 @@ html::-webkit-scrollbar {
   font-weight: 600;
   margin: 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.3px;
   position: relative;
@@ -405,5 +423,128 @@ html::-webkit-scrollbar {
   .tech-tag {
     font-size: 12px;
     padding: 4px 10px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home {
+    padding: 30px 20px;
+    width: 100vw;
+  }
+  .home .main {
+    max-width: 100vw;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    padding: 20px 5px;
+    width: 100vw;
+    gap: 40px;
+  }
+  .home .main {
+    gap: 40px;
+    max-width: 100vw;
+  }
+  .home .about {
+    max-width: 100vw;
+    padding: 24px 10px;
+    gap: 20px;
+  }
+  .home .introrow {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .home .profile {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+  }
+  .home .title {
+    padding: 0 10px;
+  }
+  .home .column {
+    gap: 16px;
+    padding-top: 1%;
+  }
+  .skills-container {
+    gap: 10px;
+    padding: 10px 2px;
+    max-width: 100vw;
+  }
+  .skill-item {
+    width: 90px;
+    padding: 12px 6px;
+  }
+  .experience-control-row {
+    width: 100vw;
+    padding: 20px 0 20px 0;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 8px 0px;
+    gap: 20px;
+    width: 100vw;
+  }
+  .home .main {
+    gap: 20px;
+    max-width: 100vw;
+  }
+  .home .about {
+    max-width: 100vw;
+    padding: 10px 2px;
+    gap: 10px;
+  }
+  .home .introrow {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .home .profile {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+  }
+  .home .title {
+    padding: 0 2px;
+  }
+  .home .text-wrapper-6 {
+    font-size: 20px;
+  }
+  .home .column {
+    gap: 8px;
+    padding-top: 0.5%;
+  }
+  .skills-container {
+    gap: 6px;
+    padding: 6px 0px;
+    max-width: 100vw;
+  }
+  .skill-item {
+    width: 70px;
+    padding: 8px 2px;
+  }
+  .skill-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  .skill-name {
+    font-size: 10px;
+  }
+  .experience-control-row {
+    width: 100vw;
+    padding: 10px 0 10px 0;
+    gap: 4px;
+  }
+  .home .content {
+    gap: 16px;
   }
 }

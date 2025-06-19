@@ -11,11 +11,11 @@ export const Sidebar = ({ className }) => {
         <a href="#experiences" className="icon-link" data-text="Experiences">
           <i className="fa-solid fa-life-ring"></i>{" "}
         </a>
-        <a href="#internships" className="icon-link" data-text="Work">
-          <i className="fa-solid fa-briefcase"></i>{" "}
-        </a>
         <a href="#notice" className="icon-link" data-text="Projects">
           <i className="fa-solid fa-diagram-project"></i>{" "}
+        </a>
+        <a href="#internships" className="icon-link" data-text="Work">
+          <i className="fa-solid fa-briefcase"></i>{" "}
         </a>
         <a href="#contact" className="icon-link" data-text="Contact Me">
           <i className="fas fa-envelope"></i> {/* Font Awesome icon */}

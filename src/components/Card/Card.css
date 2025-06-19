@@ -1,7 +1,8 @@
 .card {
   display: flex;
   flex: 0 0 585px;
-  height: 500px;
+  height: 540px;
+  min-height: 340px;
   width: 585px;
   padding: 8px;
   flex-direction: column;
@@ -58,7 +59,7 @@
   align-self: stretch;
   width: 100%;
   height: 0.01%;
-  max-height: 400px; /* Control maximum height for Safari */
+  max-height: 375px; /* Control maximum height for Safari */
 }
 .image.extend {
   padding: 0.175%;
@@ -68,7 +69,8 @@
 .img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  max-height: 100%;
+  object-fit: cover;
   border-radius: 30px;
   background-color: radial-gradient(
     100% 100% at 50% 0%,
@@ -76,7 +78,10 @@
     rgba(255, 255, 255, 0.02) 100%
   );
   user-select: none;
-  max-height: 400px; /* Control maximum height for Safari */
+}
+
+.img.contain {
+  object-fit: contain;
 }
 
 .img.round-rectangle {
@@ -169,9 +174,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100%;
   max-height: 70vh;
   width: 100%;
+}
+
+.carousel-image-container .img {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain !important;
+  display: block;
+  margin: 0 auto;
 }
 
 .single-image-container {
@@ -181,4 +196,51 @@
   width: 100%;
   height: auto;
   max-height: 75vh;
+}
+
+/* Ensure card title and description wrap and do not overflow */
+.infotitle.cardtitle,
+.infotitle,
+.cardtitle {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  width: 100%;
+  display: block;
+}
+.infodesc.carddesc,
+.infodesc,
+.carddesc {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .card {
+    height: 410px;
+    min-height: 220px;
+    width: 95vw;
+    max-width: 98vw;
+  }
+  .img {
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    height: 320px;
+    min-height: 160px;
+    width: 98vw;
+    max-width: 99vw;
+    padding: 4px;
+  }
+  .img {
+    height: 100%;
+    max-height: 100%;
+  }
 }
