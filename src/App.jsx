@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 import { Footer } from "./components/Footer/Footer";
 import { Sidebar } from "./components/Sidebar/Sidebar";
@@ -124,6 +124,35 @@ export const App = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Drag-to-scroll logic for .column rows
+  const columnRefs = useRef([]);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  const handleMouseDown = (idx, e) => {
+    if (isMobile) return;
+    isDragging.current = true;
+    startX.current = e.pageX - columnRefs.current[idx].offsetLeft;
+    scrollLeft.current = columnRefs.current[idx].scrollLeft;
+    columnRefs.current[idx].classList.add("dragging");
+  };
+  const handleMouseLeave = (idx) => {
+    isDragging.current = false;
+    columnRefs.current[idx].classList.remove("dragging");
+  };
+  const handleMouseUp = (idx) => {
+    isDragging.current = false;
+    columnRefs.current[idx].classList.remove("dragging");
+  };
+  const handleMouseMove = (idx, e) => {
+    if (!isDragging.current || isMobile) return;
+    e.preventDefault();
+    const x = e.pageX - columnRefs.current[idx].offsetLeft;
+    const walk = (x - startX.current) * 1.2; // scroll-fast
+    columnRefs.current[idx].scrollLeft = scrollLeft.current - walk;
+  };
 
   return (
     <div className="home" id="home">
@@ -254,7 +283,15 @@ export const App = () => {
             <div className="text-wrapper-6">SST Inc</div>
           </div>
 
-          <div className="column">
+          <div
+            className="column"
+            ref={(el) => (columnRefs.current[0] = el)}
+            onMouseDown={(e) => handleMouseDown(0, e)}
+            onMouseLeave={() => handleMouseLeave(0)}
+            onMouseUp={() => handleMouseUp(0)}
+            onMouseMove={(e) => handleMouseMove(0, e)}
+            style={{ cursor: !isMobile ? "grab" : undefined }}
+          >
             <Card
               tooBig={false}
               singleImage={false}
@@ -360,7 +397,15 @@ export const App = () => {
             <div className="text-wrapper-6">Competitions</div>
           </div>
 
-          <div className="column">
+          <div
+            className="column"
+            ref={(el) => (columnRefs.current[1] = el)}
+            onMouseDown={(e) => handleMouseDown(1, e)}
+            onMouseLeave={() => handleMouseLeave(1)}
+            onMouseUp={() => handleMouseUp(1)}
+            onMouseMove={(e) => handleMouseMove(1, e)}
+            style={{ cursor: !isMobile ? "grab" : undefined }}
+          >
             <Card
               tooBig={false}
               singleImage={true}
@@ -370,7 +415,7 @@ export const App = () => {
                 "Won 1st place. A SG60 Portal app, all-in-one platform for SG60 related matters."
               }
               imageUrl={"fa-brands fa-app-store-ios"}
-              imageSrc={"/assets/logos/sg60portal.png"}
+              imageSrc={"/assets/logos/spnsc.png"}
               link={"https://devpost.com/software/sg60portal"}
               github={"https://github.com/tedydevmac/SP_NSComp.git"}
               iconHover={true}
@@ -381,7 +426,7 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={true}
-              images={["/assets/logos/buildingblocs.png"]}
+              images={["/assets/logos/buildingblocs.svg"]}
               title={"BuildingBloCS 2025"}
               description={
                 "Made AI models to improve accessiblity for the deaf and blind, bundled in an app for everyday use"
@@ -413,11 +458,11 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/logos/RAYdar.png"]}
+              images={["/assets/logos/sutdwth.png"]}
               title="SUTD What The Hack 2024"
               description="An AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups"
               imageUrl="fa-brands fa-chrome"
-              imageSrc={"/assets/logos/RAYdar.png"}
+              imageSrc={"/assets/logos/sutdwth.png"}
               link={"https://devpost.com/software/raydar-8dh1xi"}
               github={"https://github.com/tedydevmac/RAYdar.git"}
               iconHover={true}
@@ -485,7 +530,15 @@ export const App = () => {
             <div className="text-wrapper-6">School Events / Projects</div>
           </div>
 
-          <div className="column">
+          <div
+            className="column"
+            ref={(el) => (columnRefs.current[2] = el)}
+            onMouseDown={(e) => handleMouseDown(2, e)}
+            onMouseLeave={() => handleMouseLeave(2)}
+            onMouseUp={() => handleMouseUp(2)}
+            onMouseMove={(e) => handleMouseMove(2, e)}
+            style={{ cursor: !isMobile ? "grab" : undefined }}
+          >
             <Card
               tooBig={false}
               singleImage={false}
