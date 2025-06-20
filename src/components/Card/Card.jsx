@@ -159,9 +159,28 @@ export const Card = ({
         }}
       >
         {isExpanded ? (
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <i className={`github fa-brands fa-github`} />
-          </a>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 14,
+            }}
+          >
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <i className={`github fa-brands fa-github`} />
+            </a>
+            {link && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="deployment-link"
+              >
+                <i className="deployment fa-solid fa-arrow-up-right-from-square" />
+              </a>
+            )}
+          </div>
         ) : (
           <i className={`icon ${imageUrl}`}></i>
         )}
@@ -200,7 +219,6 @@ export const Card = ({
             padding: isExpanded ? "0 48px" : "0 24px",
           }}
         >
-          <div className="tech-title">Skills:</div>
           <div className="tech-tags">
             {skills.map((skill, idx) => (
               <span key={idx} className={`tech-tag ${getSkillType(skill)}`}>
@@ -216,7 +234,7 @@ export const Card = ({
           onClick={() => setIsExpanded(true)}
           style={{ margin: "16px auto 12px auto", padding: "10px 28px" }}
         >
-          See What I Made
+          See Project
         </button>
       )}
     </div>

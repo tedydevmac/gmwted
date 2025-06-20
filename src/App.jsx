@@ -13,7 +13,7 @@ import InternshipCard from "./components/Internship/InternshipCard";
 
 export const App = () => {
   const [currentExperience, setCurrentExperience] = useState({
-    title: "#Project SF",
+    title: "#ProjectSF",
     desc: "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco.",
     imgSrc: [
       "assets/projectsf/1.jpg",
@@ -40,13 +40,33 @@ export const App = () => {
     },
     {
       title: "SST x BBS IDP IEP",
-      desc: "A collaborative project between SST and BBS to foster innovation and entrepreneurship.",
-      imgSrc: ["assets/sstbbs/1.jpg", "assets/sstbbs/2.jpg"],
+      desc: "The SST x BBS IDP IEP is an international exchange programme only for students part of the Integrated Diploma Programme (IDP) in SST. Through this IEP, we got to meet and work with our Indonesian counterparts in Jakarta on a project to monitor carbon dioxide levels.",
+      imgSrc: [
+        "assets/sstbbs/1a.JPG",
+        "assets/sstbbs/2a.JPG",
+        "assets/sstbbs/3a.jpg",
+        "assets/sstbbs/4a.jpg",
+        "assets/sstbbs/5a.JPG",
+        "assets/sstbbs/6a.jpg",
+        "assets/sstbbs/7a.jpg",
+        "assets/sstbbs/8a.JPG",
+        "assets/sstbbs/9a.JPG",
+        "assets/sstbbs/10a.jpg",
+        "assets/sstbbs/11a.jpg",
+        "assets/sstbbs/12a.JPG",
+        "assets/sstbbs/13a.jpg",
+        "assets/sstbbs/14a.jpg",
+      ],
+    },
+    {
+      title: "ACE Leader",
+      desc: "I was an Active Citizenship Education (ACE) Leader throughout my SST journey where I got to embark on several service-learning projects to give back to the community. I was in the ACE Interactions team mainly focusing on connecting with the beneficiaries. One notable project I did was the Interactions@Hendersons project where we hosted an in-person Online Scam Prevention workshop for the elderly.",
+      imgSrc: ["assets/ACE/1.png", "assets/ACE/2.png", "assets/ACE/3.png"],
     },
     {
       title: "LABB",
-      desc: "A hands-on learning experience focused on building and prototyping innovative solutions.",
-      imgSrc: ["assets/labb/1.jpg", "assets/labb/2.jpg"],
+      desc: "LABB is a virtual programme where we got to meet with students from all around the world to collaborate on a project together. For my group, we got to meet with students from Bina Bangsa School in Jakarta, where we worked on a project to plan our eventual in-person project on measuring air quality differences between Singapore and Indonesia.",
+      imgSrc: ["assets/LABB/1.png"],
     },
   ];
 
@@ -78,6 +98,41 @@ export const App = () => {
     },
   ];
 
+  // Certifications data
+  const certifications = [
+    {
+      title: "Cybersecurity Essentials",
+      issuer: "Cisco Networking Academy",
+      date: "May 2024",
+      imgSrc: "/assets/certifications/cybersecurity.png",
+    },
+    {
+      title: "Python Essentials",
+      issuer: "Cisco Networking Academy",
+      date: "Dec 2024",
+      imgSrc: "/assets/certifications/python.jpeg",
+    },
+    {
+      title: "IMDA x Meta Spark AR Bootcamp",
+      issuer: "MeshMinds",
+      date: "Nov 2022",
+      imgSrc: "/assets/certifications/meshmind.png",
+    },
+    {
+      title: "Apple Teacher (Swift Playgrounds)",
+      issuer: "Apple",
+      date: "Oct 2022",
+      imgSrc: "/assets/certifications/atsp.png",
+    },
+    {
+      title: "Apple Teacher",
+      issuer: "Apple",
+      date: "Oct 2022",
+      imgSrc: "/assets/certifications/at.png",
+    },
+    // Add more certifications as needed
+  ];
+
   // Define skills with their icons and names
   const skills = [
     // Frontend
@@ -89,6 +144,8 @@ export const App = () => {
     { name: "CSS3", icon: "fa-brands fa-css3-alt" },
     { name: "Flutter", icon: "fa-brands fa-flutter" },
     { name: "Dart", icon: "fa-brands fa-dart-lang" },
+    { name: "SwiftUI", icon: "fa-brands fa-swift" },
+    { name: "Figma", icon: "fa-brands fa-figma" },
 
     // Backend & Languages
     { name: "Python", icon: "fa-brands fa-python" },
@@ -267,6 +324,7 @@ export const App = () => {
                 key={index}
                 title={exp.title}
                 onClick={() => setCurrentExperience(exp)}
+                active={exp.title === currentExperience.title}
               />
             ))}
           </div>
@@ -811,22 +869,47 @@ export const App = () => {
         </div>
 
         <div className="content" id="internships">
-          <div className="title">
-            <div className="text-wrapper-6">Work</div>
-          </div>
-          <div className="internships-container">
-            {internships.map((internship, index) => (
-              <InternshipCard
-                key={index}
-                title={internship.title}
-                period={internship.period}
-                company={internship.company}
-                description={internship.description}
-                technologies={internship.technologies}
-                imgSrc={internship.imgSrc}
-                index={index}
-              />
-            ))}
+          <div className="work-certifications-row">
+            <div className="internships-container" style={{ flex: 1 }}>
+              <div className="section-header">Work Attachment</div>
+              {internships.map((internship, index) => (
+                <InternshipCard
+                  key={index}
+                  title={internship.title}
+                  period={internship.period}
+                  company={internship.company}
+                  description={internship.description}
+                  technologies={internship.technologies}
+                  imgSrc={internship.imgSrc}
+                  index={index}
+                />
+              ))}
+            </div>
+            <div className="vertical-divider" />
+            <div
+              className="certifications-container"
+              style={{ flex: 1, marginLeft: 0 }}
+            >
+              <div className="section-header">Certifications</div>
+              {certifications.map((cert, idx) => (
+                <div className="certification-card" key={idx}>
+                  <div className="certification-header">
+                    {cert.imgSrc && (
+                      <img
+                        src={cert.imgSrc}
+                        alt={cert.issuer}
+                        className="certification-logo"
+                      />
+                    )}
+                    <div className="certification-title-section">
+                      <h3 className="certification-title">{cert.title}</h3>
+                      <div className="certification-issuer">{cert.issuer}</div>
+                      <div className="certification-date">{cert.date}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

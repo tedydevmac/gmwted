@@ -79,5 +79,7 @@
 .carousel-image {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Ensures the image fits without being zoomed in */
+  max-height: 400px;
+  max-height: 50vh;
+  object-fit: cover; /* Ensures the image fits without being zoomed in */
 }

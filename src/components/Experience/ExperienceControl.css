@@ -10,10 +10,27 @@
       rgba(255, 255, 255, 0) 100%
     ),
     rgba(0, 0, 0, 0.1);
-
-  /* Shadow/M */
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
     0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 6px 9px 0px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s, filter 0.3s;
+  cursor: pointer;
+  backdrop-filter: blur(4px) saturate(1.2);
+  -webkit-backdrop-filter: blur(4px) saturate(1.2);
+}
+.exp-button-outer.active {
+  background: linear-gradient(90deg, #2163b1 0%, #43a047 100%);
+  border: 2.5px solid #fff;
+  box-shadow: 0 4px 24px 0 rgba(33, 99, 177, 0.18),
+    0 2px 12px 0 rgba(67, 160, 71, 0.18);
+  filter: brightness(1.08) saturate(1.2);
+  backdrop-filter: blur(8px) saturate(1.4);
+  -webkit-backdrop-filter: blur(8px) saturate(1.4);
+}
+.exp-button-outer:hover {
+  background: linear-gradient(90deg, #43a047 0%, #2163b1 100%);
+  border: 2px solid #43a047;
+  box-shadow: 0 2px 12px 0 rgba(33, 99, 177, 0.12);
+  filter: brightness(1.04) saturate(1.1);
 }
 .exp-button-inner {
   display: flex;

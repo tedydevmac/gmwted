@@ -41,3 +41,6 @@
   font-weight: 500;
   user-select: none;
 }
+.para strong {
+  font-weight: 600;
+}
