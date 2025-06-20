@@ -1,13 +1,11 @@
 .card {
   display: flex;
   flex: 0 0 585px;
-  height: 560px;
-  min-height: 340px;
   width: 585px;
-  padding: 8px;
+  padding: 20px 0 20px 0; /* More vertical padding */
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
   border-radius: 40px;
   border: 1px solid #fff;
   background: radial-gradient(
@@ -21,6 +19,7 @@
   transition: transform 0.2s ease, width 0.5s ease-out, height 0.5s ease-out,
     top 0.5s ease-out, left 0.5s ease-out;
   position: relative;
+  box-sizing: border-box;
 }
 .card:hover {
   transform: translateY(-8px); /* Move up on hover */
@@ -47,6 +46,28 @@
   cursor: default;
   display: flex;
   flex-direction: column;
+  padding: 32px 0 32px 0;
+  gap: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #2163b1 #e3eaf6;
+}
+
+/* Custom scrollbar for expanded modal */
+.card.expanded::-webkit-scrollbar {
+  width: 10px;
+  background: #e3eaf6;
+  border-radius: 8px;
+}
+.card.expanded::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2163b1 0%, #43a047 100%);
+  border-radius: 8px;
+  min-height: 40px;
+}
+.card.expanded::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #43a047 0%, #2163b1 100%);
+}
+.card.expanded::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .image {
@@ -60,16 +81,19 @@
   width: 100%;
   height: 0.01%;
   max-height: 375px; /* Control maximum height for Safari */
+  padding: 0 24px;
+  margin-bottom: 8px;
 }
 .image.extend {
-  padding: 0.175%;
+  padding: 0 48px;
+  margin-bottom: 16px;
   height: auto; /* Auto height when extended */
   max-height: 75vh; /* Limit height by viewport height */
 }
 .img {
   width: 100%;
-  height: 100%;
-  max-height: 100%;
+  height: auto;
+  max-height: 40vh;
   object-fit: contain;
   border-radius: 30px;
   background-color: radial-gradient(
@@ -78,6 +102,8 @@
     rgba(255, 255, 255, 0.02) 100%
   );
   user-select: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .img.contain {
@@ -104,16 +130,18 @@
 
 .info {
   display: flex;
-  padding: 12px 40px;
+  padding: 12px 24px;
   align-items: center;
   gap: 5.1%;
   align-self: stretch;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
+  box-sizing: border-box;
 }
 .info.expanded {
-  padding-bottom: 1.5%;
+  padding: 18px 48px 12px 48px;
   gap: 2.1%;
+  cursor: default;
 }
 
 .infotitle {
@@ -126,6 +154,12 @@
   font-weight: 600;
   line-height: 24px; /* 133.333% */
   user-select: none;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  width: 100%;
+  display: block;
+  margin-bottom: 4px;
 }
 .infotitle.cardtitle {
   font-size: 24px;
@@ -142,6 +176,12 @@
   line-height: 24px; /* 150% */
   white-space: normal;
   user-select: none;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  width: 100%;
+  display: block;
+  margin-bottom: 4px;
 }
 .infodesc.carddesc {
   font-size: 18px;
@@ -180,10 +220,8 @@
 }
 
 .carousel-image-container .img {
-  max-width: 100%;
-  max-height: 70vh;
+  max-height: 60vh;
   width: auto;
-  height: auto;
   object-fit: contain !important;
   display: block;
   margin: 0 auto;
@@ -196,6 +234,14 @@
   width: 100%;
   height: auto;
   max-height: 75vh;
+}
+
+.single-image-container img {
+  max-height: 60vh;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Ensure card title and description wrap and do not overflow */
@@ -220,8 +266,6 @@
 
 @media (max-width: 900px) {
   .card {
-    height: 410px;
-    min-height: 220px;
     width: 95vw;
     max-width: 98vw;
   }
@@ -233,8 +277,6 @@
 
 @media (max-width: 600px) {
   .card {
-    height: 320px;
-    min-height: 160px;
     width: 98vw;
     max-width: 99vw;
     padding: 4px;
@@ -254,4 +296,158 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+.internship-tech {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  padding: 0 24px;
+}
+
+.tech-title {
+  font-family: Inter, sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 4px;
+}
+
+.tech-tag {
+  background: rgba(33, 99, 177, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(33, 99, 177, 0.3);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+/* Color coding for skill types */
+.tech-tag.frontend {
+  background: #00bfff22;
+  color: #00bfff;
+  border-color: #00bfff55;
+}
+.tech-tag.backend {
+  background: #0077ff22;
+  color: #0077ff;
+  border-color: #0077ff55;
+}
+.tech-tag.data {
+  background: #ff980022;
+  color: #ff9800;
+  border-color: #ff980055;
+}
+.tech-tag.devops {
+  background: #43a04722;
+  color: #43a047;
+  border-color: #43a04755;
+}
+.tech-tag.soft {
+  background: #e5393522;
+  color: #e53935;
+  border-color: #e5393555;
+}
+.tech-tag.mobile {
+  background: #8e24aa22;
+  color: #8e24aa;
+  border-color: #8e24aa55;
+}
+.tech-tag.web {
+  background: #1976d222;
+  color: #1976d2;
+  border-color: #1976d255;
+}
+.tech-tag.other {
+  background: #61616122;
+  color: #616161;
+  border-color: #61616155;
+}
+
+.tech-tag:hover {
+  background: rgba(33, 99, 177, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgba(33, 99, 177, 0.6);
+}
+
+/* Remove hover-enabled highlight for shrinked card */
+.card:not(.expanded) .hover-enabled {
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+/* Style for See What I Made button */
+.see-what-i-made-btn {
+  display: block;
+  margin: 16px auto 12px auto;
+  padding: 10px 28px;
+  background: linear-gradient(90deg, #2163b1 0%, #43a047 100%);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(33, 99, 177, 0.08);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+.see-what-i-made-btn:hover {
+  background: linear-gradient(90deg, #43a047 0%, #2163b1 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1100;
+  transition: color 0.2s, background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.close-modal-btn i {
+  color: #fff;
+  font-size: 32px;
+  opacity: 0.85;
+  transition: color 0.2s, opacity 0.2s;
+}
+.close-modal-btn:hover i {
+  color: #fff;
+  opacity: 1;
+  transform: scale(1.12);
+}
+.close-modal-btn:active i {
+  color: #e3eaf6;
+  opacity: 0.9;
+  transform: scale(0.96);
 }

@@ -15,13 +15,97 @@ export const Card = ({
   expanddesc,
   tooBig,
   singleImage,
+  skills = [],
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const handleCardClick = () => {
     setIsExpanded(!isExpanded);
   };
+
+  // Helper to assign color class based on skill
+  const getSkillType = (skill) => {
+    const s = skill.toLowerCase();
+    if (
+      [
+        "react",
+        "react native",
+        "flutter",
+        "html5",
+        "css3",
+        "ui/ux",
+        "web development",
+        "360° media",
+        "deployment",
+        "chrome extension",
+        "interactive",
+        "photobooth",
+      ].some((k) => s.includes(k))
+    )
+      return "frontend";
+    if (
+      [
+        "node.js",
+        "django",
+        "flask",
+        "mongodb",
+        "api integration",
+        "api development",
+        "full stack",
+        "backend",
+      ].some((k) => s.includes(k))
+    )
+      return "backend";
+    if (
+      [
+        "python",
+        "data",
+        "ai",
+        "machine learning",
+        "natural language processing",
+        "computer vision",
+        "data analysis",
+        "astronomy",
+        "space science",
+      ].some((k) => s.includes(k))
+    )
+      return "data";
+    if (
+      ["firebase", "devops", "deployment", "iot", "sensor"].some((k) =>
+        s.includes(k)
+      )
+    )
+      return "devops";
+    if (
+      [
+        "teamwork",
+        "collaboration",
+        "leadership",
+        "learning",
+        "innovation",
+        "competition",
+        "hackathon",
+        "problem solving",
+        "inclusivity",
+        "sustainability",
+      ].some((k) => s.includes(k))
+    )
+      return "soft";
+    if (["android", "mobile app", "mobile", "ios"].some((k) => s.includes(k)))
+      return "mobile";
+    if (["web", "website"].some((k) => s.includes(k))) return "web";
+    return "other";
+  };
+
   return (
     <div className={`card ${isExpanded ? "expanded" : ""}`}>
+      {isExpanded && (
+        <button
+          className="close-modal-btn"
+          onClick={() => setIsExpanded(false)}
+        >
+          <i className="fa-solid fa-xmark" aria-label="Close"></i>
+        </button>
+      )}
       {isExpanded ? (
         singleImage ? (
           <div className="single-image-container">
@@ -58,23 +142,21 @@ export const Card = ({
           </Carousel>
         )
       ) : (
-        <a
-          href={link}
-          className="image"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="image">
           <img
             src={imageSrc}
-            className={`img ${
-              iconHover ? "hover-enabled" : "round-rectangle contain"
-            }`}
+            className={`img round-rectangle contain`}
+            style={{ padding: "4%", margin: "0 auto", display: "block" }}
           />
-        </a>
+        </div>
       )}
       <div
         className={`info ${isExpanded ? "expanded" : ""}`}
-        onClick={handleCardClick}
+        onClick={isExpanded ? undefined : handleCardClick}
+        style={{
+          padding: isExpanded ? "18px 48px 12px 48px" : "12px 24px",
+          gap: isExpanded ? "2.1%" : "5.1%",
+        }}
       >
         {isExpanded ? (
           <a href={github} target="_blank" rel="noopener noreferrer">
@@ -83,15 +165,60 @@ export const Card = ({
         ) : (
           <i className={`icon ${imageUrl}`}></i>
         )}
-        <div className="infotextcol">
-          <text className={`infotitle ${isExpanded ? "cardtitle" : ""}`}>
+        <div className="infotextcol" style={{ gap: isExpanded ? 12 : 8 }}>
+          <span
+            className={`infotitle ${isExpanded ? "cardtitle" : ""}`}
+            style={{
+              fontSize: isExpanded ? 24 : 18,
+              lineHeight: isExpanded ? "32px" : "24px",
+              marginBottom: 4,
+              wordBreak: "break-word",
+              whiteSpace: "normal",
+            }}
+          >
             {title}
-          </text>
-          <text className={`infodesc ${isExpanded ? "carddesc" : ""}`}>
+          </span>
+          <span
+            className={`infodesc ${isExpanded ? "carddesc" : ""}`}
+            style={{
+              fontSize: isExpanded ? 18 : 16,
+              lineHeight: "24px",
+              wordBreak: "break-word",
+              whiteSpace: "normal",
+            }}
+          >
             {isExpanded ? expanddesc : description}
-          </text>
+          </span>
         </div>
       </div>
+      {skills && skills.length > 0 && (
+        <div
+          className="internship-tech"
+          style={{
+            marginTop: isExpanded ? 24 : 12,
+            marginBottom: isExpanded ? 24 : 8,
+            padding: isExpanded ? "0 48px" : "0 24px",
+          }}
+        >
+          <div className="tech-title">Skills:</div>
+          <div className="tech-tags">
+            {skills.map((skill, idx) => (
+              <span key={idx} className={`tech-tag ${getSkillType(skill)}`}>
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {!isExpanded && (
+        <button
+          className="see-what-i-made-btn"
+          onClick={() => setIsExpanded(true)}
+          style={{ margin: "16px auto 12px auto", padding: "10px 28px" }}
+        >
+          See What I Made
+        </button>
+      )}
     </div>
   );
 };

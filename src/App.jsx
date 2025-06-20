@@ -297,7 +297,7 @@ export const App = () => {
               singleImage={false}
               images={["/assets/logos/sstinc.png"]}
               title="SST Inc Application of the Year Champion 2024"
-              description="Won this award due to the creations of our various well performing apps. We were selected for ProjectSF due to this."
+              description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/assets/logos/sstinc.png"}
               github={
@@ -307,6 +307,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "React Native",
+                "Mobile App",
+                "Teamwork",
+                "UI/UX",
+                "Hackathon",
+              ]}
             />
             <Card
               images={[
@@ -314,8 +321,8 @@ export const App = () => {
                 "/assets/OH2024/OHAndroid.jpeg",
                 "/assets/OH2024/OHIOS.PNG",
               ]}
-              title="SST Open House App 2024/2025 (IOS,Android)"
-              description="I was one of the lead developers for this app which was used during SST's Open House event to engage visitors and provide information about the school."
+              title="SST Open House App 2024 (IOS/Android)"
+              description="I am one of the lead developers for this app which was used during SST's Open House event."
               imageUrl="fa-solid fa-door-open"
               imageSrc={"/assets/logos/SSTOH2024.png"}
               link={
@@ -328,6 +335,13 @@ export const App = () => {
               }
               tooBig={true}
               singleImage={false}
+              skills={[
+                "Flutter",
+                "Firebase",
+                "Mobile App",
+                "Event Integration",
+                "Team Leadership",
+              ]}
             />
             <Card
               tooBig={false}
@@ -342,6 +356,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "React Native",
+                "Medical Informatics",
+                "API Integration",
+                "UI/UX",
+                "Teamwork",
+              ]}
             />
             <Card
               tooBig={false}
@@ -356,6 +377,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "React",
+                "360° Media",
+                "Web Development",
+                "UI/UX",
+                "Deployment",
+              ]}
             />
             <Card
               tooBig={false}
@@ -373,6 +401,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Flutter",
+                "Android",
+                "UI/UX",
+                "Notifications",
+                "Collaboration",
+              ]}
             />
             <Card
               tooBig={false}
@@ -389,6 +424,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "React Native",
+                "Mobile App",
+                "Teamwork",
+                "UI/UX",
+                "Hackathon",
+              ]}
             />
           </div>
         </div>
@@ -422,6 +464,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "React",
+                "Node.js",
+                "Full Stack",
+                "API Development",
+                "Teamwork",
+              ]}
             />
             <Card
               tooBig={false}
@@ -439,6 +488,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Data Analysis",
+                "Astronomy",
+                "Space Science",
+                "Teamwork",
+              ]}
             />
             <Card
               tooBig={false}
@@ -454,6 +510,13 @@ export const App = () => {
               expanddesc={
                 "Made AI models to improve accessiblity for the deaf and blind, bundled in an App for everyday use. BuildingBloCS is a hackathon focused on accessibility and inclusivity."
               }
+              skills={[
+                "Python",
+                "Computer Vision",
+                "AI",
+                "Accessibility",
+                "Inclusivity",
+              ]}
             />
             <Card
               tooBig={false}
@@ -469,6 +532,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "AI",
+                "Chrome Extension",
+                "LGBTQ+",
+                "Minority Groups",
+              ]}
             />
             <Card
               title={"BlahajCTF 2024"}
@@ -489,6 +559,13 @@ export const App = () => {
               expanddesc={
                 "This was my first ever external competitive CTF competition that I have joined. \nI had done CTFs before in school hosted by SST Inc, but those had more beginner level questions. The questions I encountered were MUCH more difficult. \nLuckily, I had attended their training beforehand and I was able to solve a surpising amount of questions with the help of my teammates. Unfortuantely, despite our best efforts, we only managed to reach the top 30 teams and did not make it to the finals. However, I think it was still a good learning experience in the area of cybersecurity."
               }
+              skills={[
+                "Cybersecurity",
+                "CTF",
+                "Teamwork",
+                "Problem Solving",
+                "Learning",
+              ]}
             />
 
             <Card
@@ -504,6 +581,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Computer Science",
+                "Olympiad",
+                "Competition",
+                "Learning",
+                "Teamwork",
+              ]}
             />
 
             <Card
@@ -521,6 +605,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Coding",
+                "Competition",
+                "Learning",
+                "Teamwork",
+              ]}
             />
           </div>
         </div>
@@ -554,6 +645,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Computer Vision",
+                "Robotics",
+                "Autonomous",
+                "Teamwork",
+              ]}
             />
             <Card
               tooBig={false}
@@ -570,6 +668,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Robotics",
+                "Remote Control",
+                "Disaster Management",
+                "Teamwork",
+              ]}
             />
             <Card
               tooBig={false}
@@ -587,6 +692,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "IoT",
+                "Hydroponics",
+                "Innovation",
+                "Sustainability",
+              ]}
             />
             <Card
               tooBig={false}
@@ -602,6 +714,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Machine Learning",
+                "Natural Language Processing",
+                "Cyberbullying",
+                "LGBTQ+",
+              ]}
             />
             <Card
               tooBig={false}
@@ -617,6 +736,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Computer Vision",
+                "Photobooth",
+                "Interactive",
+                "SST Celebrations",
+              ]}
             />
             <Card
               tooBig={false}
@@ -631,6 +757,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Telegram Bot",
+                "School Work Management",
+                "Collaboration",
+                "Innovation",
+              ]}
             />
             <Card
               tooBig={false}
@@ -645,6 +778,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Self-Help",
+                "Exercise",
+                "Muscle Group",
+                "Target Group",
+              ]}
             />
             <Card
               tooBig={false}
@@ -659,6 +799,13 @@ export const App = () => {
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
+              skills={[
+                "Python",
+                "Sensor",
+                "Food Preservation",
+                "ICT",
+                "Innovation",
+              ]}
             />
           </div>
         </div>

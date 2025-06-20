@@ -71,7 +71,7 @@
     font-size: 25px;
   }
   100% {
-    width: 175px; /* Adjust the width as needed */
+    width: 125px; /* Adjust the width as needed */
     border-radius: 15px; /* Rounded rectangle */
     font-size: 0px;
     background: rgb(30, 30, 30);
