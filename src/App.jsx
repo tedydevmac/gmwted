@@ -420,13 +420,13 @@ export const App = () => {
                 "/assets/aspa/aspa6.webp",
               ]}
               title="ASPA (IOS,Android)"
-              description="ASPA app aims to centralise medical resources for doctors working under Asean Society of Paediatric Anaesthesiologists. It includes tools to calculate drug dosages, contain important medical information, and quick reference materials. My Serve Project for 2023-2024."
+              description="ASPA app aims to centralise medical resources for doctors working under Asia Society of Paediatric Anaesthesiologists. It includes tools to calculate drug dosages, contain important medical information, and quick reference materials. My Serve Project for 2023-2024."
               imageUrl="fa-solid fa-user-doctor"
               imageSrc={"/assets/logos/ASPA.webp"}
               github={"https://github.com/tedydevmac/aspa.git"}
               iconHover={false}
               expanddesc={
-                "A mobile app which we made in collaboration with KKH Hospital.\nAt first it was only meant to be made for use for KKH, however, the doctors we were working with had expanded the app's user base to be used for doctors working under Asean Society of Paediatric Anaesthesiologists too, which is a society of paediatric anaesthesia colleagues from various Asian countries."
+                "A mobile app which we made in collaboration with KKH Hospital.\nAt first it was only meant to be made for use for KKH, however, the doctors we were working with had expanded the app's user base to be used for doctors working under Asia Society of Paediatric Anaesthesiologists too, which is a society of paediatric anaesthesia colleagues from various Asian countries."
               }
               skills={["React Native", "Mobile App", "Medical Informatics"]}
             />
