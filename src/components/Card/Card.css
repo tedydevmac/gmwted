@@ -216,13 +216,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  max-height: 90vh; /* Increased from 80vh */
+  max-height: 100vh; /* Increased from 80vh */
   max-width: 100vw;
   width: 100%;
 }
 
 .carousel-image-container .img {
-  max-height: 80vh; /* Increased from 60vh */
+  max-height: 70vh; /* Increased from 60vh */
   max-width: 100%;
   width: auto;
   height: auto;
@@ -281,13 +281,81 @@
 
 @media (max-width: 600px) {
   .card {
-    width: 98vw;
-    max-width: 99vw;
-    padding: 4px;
+    width: 99vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    min-height: 120px;
+    padding: 2px;
+    margin-bottom: 8px;
+    border-radius: 18px;
+    box-sizing: border-box;
   }
-  .img {
-    height: 100%;
-    max-height: 100%;
+  .image,
+  .image.extend {
+    padding: 0 2vw;
+    margin-bottom: 6px;
+    max-height: 40vh;
+  }
+  .img,
+  .carousel-image-container .img,
+  .single-image-container img {
+    border-radius: 14px;
+    max-height: 40vh;
+    min-height: 120px;
+  }
+  .carousel-image-container {
+    max-height: 45vh;
+    min-height: 120px;
+  }
+  .see-what-i-made-btn {
+    min-height: 44px;
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+  .close-modal-btn {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 22px;
+  }
+  .infotitle,
+  .infotitle.cardtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .infodesc,
+  .infodesc.carddesc {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 1px;
+    border-radius: 10px;
+  }
+  .image,
+  .image.extend {
+    padding: 0 1vw;
+    max-height: 30vh;
+  }
+  .img,
+  .carousel-image-container .img,
+  .single-image-container img {
+    border-radius: 8px;
+    max-height: 30vh;
+    min-height: 80px;
+  }
+  .infotitle,
+  .infotitle.cardtitle {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .infodesc,
+  .infodesc.carddesc {
+    font-size: 11px;
+    line-height: 14px;
   }
 }
 
