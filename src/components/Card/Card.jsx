@@ -206,7 +206,14 @@ export const Card = ({
               whiteSpace: "normal",
             }}
           >
-            {isExpanded ? expanddesc : description}
+            {isExpanded
+              ? expanddesc.split("\n").map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))
+              : description}
           </span>
         </div>
       </div>
@@ -234,7 +241,7 @@ export const Card = ({
           onClick={() => setIsExpanded(true)}
           style={{ margin: "16px auto 12px auto", padding: "10px 28px" }}
         >
-          See Project
+          Learn More
         </button>
       )}
     </div>

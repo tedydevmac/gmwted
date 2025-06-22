@@ -170,9 +170,9 @@
 
   /* Heading/Regular/S */
   font-family: Inter;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px; /* 150% */
   white-space: normal;
   user-select: none;
@@ -184,7 +184,8 @@
   margin-bottom: 4px;
 }
 .infodesc.carddesc {
-  font-size: 18px;
+  font-size: 20px;
+  color: var(--Adaptive-Weak, rgba(255, 255, 255, 0.8));
   line-height: 24px;
 }
 .infotextcol {

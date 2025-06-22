@@ -59,7 +59,7 @@ export const App = () => {
       ],
     },
     {
-      title: "ACE Leader",
+      title: "ACE Leadership",
       desc: "I was an Active Citizenship Education (ACE) Leader throughout my SST journey where I got to embark on several service-learning projects to give back to the community. I was in the ACE Interactions team mainly focusing on connecting with the beneficiaries. One notable project I did was the Interactions@Hendersons project where we hosted an in-person Online Scam Prevention workshop for the elderly.",
       imgSrc: ["assets/ACE/1.png", "assets/ACE/2.png", "assets/ACE/3.png"],
     },
@@ -353,17 +353,22 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/logos/sstinc.png"]}
+              images={[
+                "/assets/sstincappofyear/appofyear1.jpg",
+                "/assets/sstincappofyear/appofyear2.jpg",
+                "/assets/sstincappofyear/appofyear3.jpeg",
+              ]}
               title="SST Inc Application of the Year Champion 2024"
-              description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
+              description="My Serve company won this award due to creations of our various well-performing apps. We were selected for #ProjectSF because of this."
               imageUrl="fa-brands fa-telegram"
               imageSrc={"/assets/logos/sstinc.png"}
-              github={
-                "https://github.com/tedydevmac/sstinccamp2024hackathon.git"
+              github={"https://github.com/sst-inc/openhouseapp.git"}
+              link={
+                "https://www.instagram.com/p/DDZPigwz7pZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
               }
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "My Serve Company, orbitcode, had created 3 projects: SST Open House, ASPA, SST Virtual Tour, which had all scored very well after being graded by the Board of Directors (BODs) of SST Inc.\nThis is in combination with our Peer Reviews, where we graded each other on our performance and quality of work.\n\nAll in all, we had all scored very well and were hence named the SST Inc App of the Year for 2024 and were then selected for #ProjectSF."
               }
               skills={[
                 "React Native",
@@ -379,8 +384,8 @@ export const App = () => {
                 "/assets/OH2024/OHAndroid.jpeg",
                 "/assets/OH2024/OHIOS.PNG",
               ]}
-              title="SST Open House App 2024 (IOS/Android)"
-              description="I am one of the lead developers for this app which was used during SST's Open House event."
+              title="SST Open House App (IOS,Android)"
+              description="I was one of the lead developers for this app which was used during SST's Open House Day for 2024/2025. Reached #2 in Trending on the App Store during Open House day and achieved >1000 total downloads from both platforms."
               imageUrl="fa-solid fa-door-open"
               imageSrc={"/assets/logos/SSTOH2024.png"}
               link={
@@ -389,9 +394,9 @@ export const App = () => {
               github={"https://github.com/tedydevmac/openhouseapp2024.git"}
               iconHover={true}
               expanddesc={
-                "Requested by teachers planning the Open House event, they wanted an app to be made to be integrated with the event activities, engage visitors and provide information about the school. My existing Project Serve team decided to take on this task alongside that year's Serve project. Although our schedules were extremely packed, we worked on it to our best ability despite time challenges. In the end the launch of the app was successful, and it ended up accumulating over 1000 users during event day, reaching Number 2 in Trending on the App Store."
+                "Requested by teachers planning the Open House event, they wanted an app to be made to be integrated with the event activities, engage visitors and provide information about the school.\n\nMy existing Project Serve team decided to take on this task alongside that year's Serve project. Although our schedules were extremely packed, we worked on it to our best ability despite time challenges.\n\nIn the end the launch of the app was successful, and it ended up accumulating over 1000 users during event day, reaching Number 2 in Trending on the App Store."
               }
-              tooBig={true}
+              tooBig={false}
               singleImage={false}
               skills={[
                 "Flutter",
@@ -402,17 +407,24 @@ export const App = () => {
               ]}
             />
             <Card
-              tooBig={false}
+              tooBig={true}
               singleImage={false}
-              images={["/assets/logos/ASPA.png"]}
+              images={[
+                "/assets/aspa/aspa1.PNG",
+                "/assets/aspa/aspa2.PNG",
+                "/assets/aspa/aspa3.PNG",
+                "/assets/aspa/aspa4.PNG",
+                "/assets/aspa/aspa5.PNG",
+                "/assets/aspa/aspa6.PNG",
+              ]}
               title="ASPA (IOS,Android)"
-              description="ASPA aims to centralise medical resources for doctors working under Asean Society of Paediatric Anaesthesiologists. It includes tools to calculate drug dosages, contain important medical information, and quick reference materials. My Project Serve for 2023-2024."
+              description="ASPA app aims to centralise medical resources for doctors working under Asean Society of Paediatric Anaesthesiologists. It includes tools to calculate drug dosages, contain important medical information, and quick reference materials. My Serve Project for 2023-2024."
               imageUrl="fa-solid fa-user-doctor"
               imageSrc={"/assets/logos/ASPA.png"}
               github={"https://github.com/tedydevmac/aspa.git"}
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "A mobile app which we made in collaboration with KKH Hospital.\nAt first it was only meant to be made for use for KKH, however, the doctors we were working with had expanded the app's user base to be used for doctors working under Asean Society of Paediatric Anaesthesiologists too, which is a society of paediatric anaesthesia colleagues from various Asian countries."
               }
               skills={[
                 "React Native",
@@ -425,7 +437,7 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/logos/virtualtour.png"]}
+              images={["/assets/virtualtour/video.MP4"]}
               title="SST Virtual Tour (Web)"
               description="This website lets potential students and parents explore the school and its facilities through a 360 degree tour. My 2024 Serve Project"
               imageUrl="fa-solid fa-school"
@@ -433,7 +445,7 @@ export const App = () => {
               github={"https://github.com/tedydevmac/virtualtour.git"}
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "The SST virtual tour app aims to provide those interested in touring SST with a convenient way to tour SST without having to come to SST physically, as SST receives requests for campus tours from parents, but they do not have provisions to meet these requests. The web app contains 3D tours of specified areas and rooms in SST."
               }
               skills={[
                 "React",
@@ -457,7 +469,7 @@ export const App = () => {
               github={"https://github.com/tedydevmac/SST-Announcer-flutter.git"}
               iconHover={true}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "SST Announcer is an app built for students and staff of the School of Science and Technology, Singapore, to stay updated with the school's announcements with ease and convenience on their devices.\n\nThe app allows users to browse, pin and share important announcements made by the school.\nFurthermore, the app also sends notifications to students whenever a new announcement is posted. This helps to ensure that students are kept updated with the latest information from the school. It also allows them to sign up for competitions and programs efficiently."
               }
               skills={[
                 "Flutter",
@@ -468,8 +480,8 @@ export const App = () => {
               ]}
             />
             <Card
-              tooBig={false}
-              singleImage={false}
+              tooBig={true}
+              singleImage={true}
               images={["/assets/logos/sstinc.png"]}
               title="SST Inc Camp 2024 Hackathon"
               description="A 1 day hackathon where we built a mobile app to spice up the game of TicTacToe"
@@ -480,7 +492,7 @@ export const App = () => {
               }
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "Our idea was to break free from the conventional move of placing 'shape on empty square only' by adding a simple trick of allowing the player to replace the other player's shape with their own.\nThis allowed for a more diverse set of possible games as it allowed for more possibilities in placement strategies."
               }
               skills={[
                 "React Native",
@@ -508,8 +520,14 @@ export const App = () => {
           >
             <Card
               tooBig={false}
-              singleImage={true}
-              images={["/assets/logos/sg60portal.png"]}
+              singleImage={false}
+              images={[
+                "/assets/nsc/1.jpeg",
+                "/assets/nsc/3.JPEG",
+                "/assets/nsc/4.jpeg",
+                "/assets/nsc/5.jpg",
+                "/assets/nsc/videoplayback.mp4",
+              ]}
               title={"SP National Software Competition 2025"}
               description={
                 "Won 1st place overall. My team and I created: SG60 Portal App, an all-in-one one-stop platform for SG60 related matters, targeted towards the general public."
@@ -520,7 +538,7 @@ export const App = () => {
               github={"https://github.com/tedydevmac/SP_NSComp.git"}
               iconHover={true}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "The hackathon's theme was SG60. We realised that other teams would likely want to focus on one specific feature/idea that they would want to have to satisfy the SG60 theme.\nHence, in order to outshine the rest, our idea was to simply just include every possible creative feature we could think of related to this theme: to add as many technically impressive features as possible. As a result, it worked!"
               }
               skills={[
                 "React",
@@ -533,31 +551,35 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/logos/astrigues.png"]}
+              images={[
+                "/assets/astrigue/PHOTO-2024-04-06-14-20-19.jpg",
+                "/assets/astrigue/IMG_1656.PNG",
+              ]}
               title={"Raffles Astronomy Astrigue' 24 Nocturne"}
               description={
-                "Won 3rd place overall. A competition where we were tested on our knowledge regarding Astronomy and Space Science."
+                "Won 3rd place overall. A competition held by Raffles Astronomy Club where we were tested on our knowledge regarding Astronomy and Space Science."
               }
               imageUrl={"fa-solid fa-earth-europe"}
               imageSrc={"/assets/logos/astrigue.png"}
-              link={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
-              github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "Organised by Raffles Institution Astronomy Club, Astrigue 2024 was organised on 6 April 2024 on a Saturday morning at Raffles Institution Campus.\n\nThe Astrigue competitions aims to foster a love for astronomy by offering students a unique and engaging competition experience. It is designed to be both fun and competitive, providing students with various opportunities to showcase their knowledge and passion for astronomy and connect with like-minded students.\n\nAstrigue consists of three segments: the Project Round (submitted pre-event) and MCQ will contribute towards teams' eligibility for the Finals. The Amazing Race carries noweightage and aims to expose students' to the diverse disciplines within astronomy through educational and fun games and activities.\n\nSST team 3 came in 3rd place. The team consists of GAVRIEL CHIA KAI ZE S3-05, TEH TIAN CHENG S3-02, NAGARAJAN VIMAL BALAJI S3-02, and GOH MIN WEN, TED, S3-03."
               }
-              skills={[
-                "Python",
-                "Data Analysis",
-                "Astronomy",
-                "Space Science",
-                "Teamwork",
-              ]}
+              skills={["Astronomy", "Space Science"]}
             />
             <Card
               tooBig={false}
-              singleImage={true}
-              images={["/assets/logos/buildingblocs.svg"]}
+              singleImage={false}
+              images={[
+                "/assets/bb/6.jpeg",
+                "/assets/bb/1.png",
+                "/assets/bb/2.png",
+                "/assets/bb/3.png",
+                "/assets/bb/4.png",
+                "/assets/bb/5.png",
+                "/assets/bb/6.jpg",
+                "/assets/bb/7.jpg",
+              ]}
               title={"BuildingBloCS 2025"}
               description={
                 "Created Computer Vision models to improve accessiblity for the deaf and blind to help them better navigate this world, bundled in an app for everyday use."
@@ -566,7 +588,7 @@ export const App = () => {
               imageSrc={"/assets/logos/buildingblocs.png"}
               iconHover={false}
               expanddesc={
-                "Made AI models to improve accessiblity for the deaf and blind, bundled in an App for everyday use. BuildingBloCS is a hackathon focused on accessibility and inclusivity."
+                "The hackathon's theme was: How may we improve accessibility and empower the disadvantaged and disabled in our society?\n\nWe then came together and discussed about what we thought would be the most prevalent issues that have not completely been addressed in today's society. Namely, surrounding awareness for the blind and the ability for abled people to communicate with the deaf.\n\nOur idea?\nFor the blind, most would carry around a walking stick to feel out things in front of them. Hence, we created an object detection model that would be able to detect and read out objects near them based on their positions.\nFor the deaf? Most abled people are not familiar with sign language. Hence, when both parties attempt to communicate, they resort to using simple hand gestures and signals. But what if they wanted to convey more complex sentences, like names of places or specific transportation directions?\n\nHence, to bridge this gap, we came up with solutions for both sides.\nFor the abled person, they would be able to use our app and point their phones towards the deaf person, and using our CV model, the app would be able to translate the sequence of sign languages into full sentences.\nOn the deaf person's side, we used a voice to text model such that they can understand what someone else is speaking to them. All of this were then bundled into a user-friendly app."
               }
               skills={[
                 "Python",
@@ -575,11 +597,17 @@ export const App = () => {
                 "Accessibility",
                 "Inclusivity",
               ]}
+              github={"https://github.com/tedydevmac/buildingblocs_I27.git"}
             />
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/logos/sutdwth.png"]}
+              images={[
+                "/assets/sutdwth/RAYdar.png",
+                "/assets/sutdwth/1.mp4",
+                "/assets/sutdwth/2.mp4",
+                "/assets/sutdwth/1.JPG",
+              ]}
               title="SUTD What The Hack 2024"
               description="For this hackathon, we built an AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups."
               imageUrl="fa-brands fa-chrome"
@@ -588,7 +616,7 @@ export const App = () => {
               github={"https://github.com/tedydevmac/RAYdar.git"}
               iconHover={true}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "Inspiration:\nOur team realised that offensive messages are rampant in social media. Hence, we created a machine learning model to detect offensive messages against the LGBTQ+, different races and ethinicity and more groups.\n\nWhat it does:\nIt has 2 sub-features, a scanning feature and a typing check feature.\nScanning when the user opens the extension menu, a pop-up wil show with a scan button, where the user can click the button in order to scan all the text inside the text input to see how offensive it is.\nTyping check when the user is typing in a messaging app such as discord or telegram, what they are typing is checked in order to check for any hateful words or phrases in what they typed. If what they typed is hateful, the app will send them an alert warning them that their message is hateful, and advise them to change their language to something more constructive.\n\nHow we built it:\nWe used tensorflow to create the machine learning model in python. Then we used react to create the chrome extension. We used flask so that we can recieve the information from the model."
               }
               skills={[
                 "Python",
@@ -615,7 +643,7 @@ export const App = () => {
                 "/assets/blahaj/blahaj4.png",
               ]}
               expanddesc={
-                "This was my first ever external competitive CTF competition that I have joined. \nI had done CTFs before in school hosted by SST Inc, but those had more beginner level questions. The questions I encountered were MUCH more difficult. \nLuckily, I had attended their training beforehand and I was able to solve a surpising amount of questions with the help of my teammates. Unfortuantely, despite our best efforts, we only managed to reach the top 30 teams and did not make it to the finals. However, I think it was still a good learning experience in the area of cybersecurity."
+                "This was my first ever external competitive CTF competition that I have joined.\nI had done CTFs before in school hosted by SST Inc, but those had more beginner level questions. The questions I encountered were MUCH more difficult. \nLuckily, I had attended their training beforehand and I was able to solve a surpising amount of questions with the help of my teammates. Unfortuantely, despite our best efforts, we only managed to reach the top 30 teams and did not make it to the finals.\nHowever, I think it was still a good learning experience in the area of cybersecurity."
               }
               skills={[
                 "Cybersecurity",
@@ -629,7 +657,7 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={true}
-              images={["/assets/logos/noi.jpeg"]}
+              images={["/assets/noi/COP_Prelim.png"]}
               title={"National Olympiad in Informatics (NOI) 2025"}
               description={"Obtained Participation. My first NOI competition."}
               imageUrl={"fa-solid fa-computer"}
@@ -637,7 +665,7 @@ export const App = () => {
               link={"https://noisg.comp.nus.edu.sg/noi/"}
               iconHover={false}
               expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "A huge step up from the usual Perse competitions. This was the first NOI competition that I have joined.\nI found it very thrilling and satisfying as I worked on the problems sets. Even though I did not make it to the Top 5 scorers, I found it to be a good learning experience regarding competitve programming."
               }
               skills={[
                 "Computer Science",
@@ -650,8 +678,11 @@ export const App = () => {
 
             <Card
               tooBig={false}
-              singleImage={true}
-              images={["/assets/persecc.png"]}
+              singleImage={false}
+              images={[
+                "/assets/perse/persecc.png",
+                "/assets/perse/persecc2.png",
+              ]}
               title={"Perse Coding Challenge 2023 - 2025"}
               description={
                 "Won Distinction - Best in School award in 2023, Won Distinction in 2025"
@@ -660,9 +691,7 @@ export const App = () => {
               imageSrc={"/assets/logos/persecc.jpg"}
               link={"https://pctc.perse.co.uk/"}
               iconHover={false}
-              expanddesc={
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              }
+              expanddesc={""}
               skills={[
                 "Python",
                 "Coding",
@@ -699,7 +728,7 @@ export const App = () => {
               imageUrl={"fa-solid fa-robot"}
               imageSrc={"/assets/logos/sst.png"}
               iconHover={false}
-              github={"https://github.com/tedydevmac/SSTSUTDBigD.git"}
+              github={"https://github.com/tedydevmac/Grp6_IDC2025.git"}
               expanddesc={
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
               }
