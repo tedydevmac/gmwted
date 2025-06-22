@@ -88,7 +88,7 @@
   padding: 0 48px;
   margin-bottom: 16px;
   height: auto; /* Auto height when extended */
-  max-height: 75vh; /* Limit height by viewport height */
+  max-height: 91vh; /* Increased from 75vh */
 }
 .img {
   width: 100%;
@@ -122,7 +122,7 @@
 .img.single {
   object-fit: contain;
   height: auto; /* Changed from percentage to auto */
-  max-height: 75vh; /* Use viewport height for better control */
+  max-height: 80vh; /* Increased from 75vh */
 }
 .hover-enabled:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Highlight on hover */
@@ -216,13 +216,13 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  max-height: 80vh;
+  max-height: 90vh; /* Increased from 80vh */
   max-width: 100vw;
   width: 100%;
 }
 
 .carousel-image-container .img {
-  max-height: 60vh;
+  max-height: 80vh; /* Increased from 60vh */
   max-width: 100%;
   width: auto;
   height: auto;
@@ -237,11 +237,11 @@
   align-items: center;
   width: 100%;
   height: auto;
-  max-height: 75vh;
+  max-height: 90vh; /* Increased from 75vh */
 }
 
 .single-image-container img {
-  max-height: 60vh;
+  max-height: 80vh; /* Increased from 60vh */
   width: auto;
   object-fit: contain;
   display: block;
