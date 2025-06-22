@@ -14,7 +14,12 @@ const InternshipCard = ({
     <div className="internship-card" style={{ "--index": index }}>
       <div className="internship-header">
         <div className="internship-logo-container">
-          <img src={imgSrc} alt={company} className="internship-logo" />
+          <img
+            src={imgSrc}
+            alt={company}
+            className="internship-logo"
+            loading="lazy"
+          />
         </div>
         <div className="internship-title-section">
           <h2 className="internship-title">{title}</h2>

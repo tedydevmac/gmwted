@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Card.css";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
+import VideoModal from "./VideoModal";
+
 export const Card = ({
   title,
   description,
@@ -18,30 +20,52 @@ export const Card = ({
   skills = [],
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  // Dedicated video modal state
+  const [videoModal, setVideoModal] = useState({
+    open: false,
+    src: null,
+    poster: null,
+    title: null,
+  });
+
+  // Cleanup video modal on unmount
+  useEffect(() => {
+    return () => {
+      setVideoModal({ open: false, src: null, poster: null, title: null });
+    };
+  }, []);
+
   const handleCardClick = () => {
     setIsExpanded(!isExpanded);
+    setVideoModal({ open: false, src: null, poster: null, title: null });
   };
 
   // Helper to assign color class based on skill
   const getSkillType = (skill) => {
     const s = skill.toLowerCase();
+    // Frontend
     if (
       [
         "react",
         "react native",
         "flutter",
+        "html",
         "html5",
+        "css",
         "css3",
         "ui/ux",
         "web development",
         "360° media",
-        "deployment",
         "chrome extension",
         "interactive",
         "photobooth",
+        "web",
+        "website",
+        "interactive web app",
       ].some((k) => s.includes(k))
     )
       return "frontend";
+    // Backend
     if (
       [
         "node.js",
@@ -52,29 +76,63 @@ export const Card = ({
         "api development",
         "full stack",
         "backend",
+        "apis",
       ].some((k) => s.includes(k))
     )
       return "backend";
+    // Data Science & AI
     if (
       [
         "python",
         "data",
         "ai",
         "machine learning",
+        "ml",
         "natural language processing",
         "computer vision",
         "data analysis",
         "astronomy",
         "space science",
+        "pandas",
+        "scikit-learn",
+        "numpy",
+        "tensorflow",
+        "pytorch",
+        "opencv",
+        "streamlit",
       ].some((k) => s.includes(k))
     )
       return "data";
+    // DevOps & Hardware
     if (
-      ["firebase", "devops", "deployment", "iot", "sensor"].some((k) =>
-        s.includes(k)
-      )
+      [
+        "firebase",
+        "devops",
+        "deployment",
+        "iot",
+        "sensor",
+        "sensors",
+        "arduino",
+        "hardware-software integration",
+        "embedded systems",
+      ].some((k) => s.includes(k))
     )
       return "devops";
+    // Mobile
+    if (
+      [
+        "android",
+        "mobile app",
+        "mobile",
+        "ios",
+        "cross-platform",
+        "swift",
+        "swiftui",
+        "dart",
+      ].some((k) => s.includes(k))
+    )
+      return "mobile";
+    // Soft skills
     if (
       [
         "teamwork",
@@ -87,34 +145,78 @@ export const Card = ({
         "problem solving",
         "inclusivity",
         "sustainability",
+        "health & fitness",
       ].some((k) => s.includes(k))
     )
       return "soft";
-    if (["android", "mobile app", "mobile", "ios"].some((k) => s.includes(k)))
-      return "mobile";
-    if (["web", "website"].some((k) => s.includes(k))) return "web";
     return "other";
   };
+
+  // Helper to render a video thumbnail with play button overlay
+  const renderVideoThumbnail = (media, idx) => (
+    <div
+      className="video-thumbnail-container"
+      style={{ position: "relative", width: "100%", height: "100%" }}
+      onClick={() =>
+        setVideoModal({
+          open: true,
+          src: media.src,
+          poster: media.poster,
+          title,
+        })
+      }
+    >
+      <img
+        src={media.poster || undefined}
+        alt="video thumbnail"
+        className="img contain"
+        style={{ filter: "brightness(0.7)", cursor: "pointer" }}
+        loading="lazy"
+        onError={(e) => {
+          // fallback: if poster is not available, use a generic placeholder
+          e.target.onerror = null;
+          e.target.src = "/assets/logos/play-placeholder.png";
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          color: "white",
+          fontSize: 64,
+          pointerEvents: "none",
+        }}
+      >
+        <i
+          className="fa-solid fa-circle-play"
+          style={{ filter: "drop-shadow(0 0 8px #000)" }}
+        ></i>
+      </div>
+    </div>
+  );
 
   return (
     <div className={`card ${isExpanded ? "expanded" : ""}`}>
       {isExpanded && (
-        <button
-          className="close-modal-btn"
-          onClick={() => setIsExpanded(false)}
-        >
+        <button className="close-modal-btn" onClick={() => handleCardClick()}>
           <i className="fa-solid fa-xmark" aria-label="Close"></i>
         </button>
       )}
       {isExpanded ? (
         singleImage ? (
           <div className="single-image-container">
-            <img
-              src={images[0]}
-              alt={imageSrc}
-              className={`img single contain`}
-              loading="lazy"
-            ></img>
+            {images[0]?.type === "video" ? (
+              renderVideoThumbnail(images[0], 0)
+            ) : (
+              <img
+                src={images[0]?.src || images[0]}
+                alt={imageSrc}
+                className={`img single contain`}
+                loading="lazy"
+              />
+            )}
           </div>
         ) : (
           <Carousel
@@ -128,15 +230,38 @@ export const Card = ({
             showArrows={tooBig ? true : false}
             showThumbs={tooBig ? false : true}
             showStatus={false}
+            renderThumbs={() =>
+              images.map((media, idx) =>
+                media.type === "video" && media.poster ? (
+                  <img
+                    key={idx}
+                    src={media.poster}
+                    alt="video thumbnail"
+                    className="carousel-thumb"
+                  />
+                ) : (
+                  <img
+                    key={idx}
+                    src={media.src || media}
+                    alt="carousel thumbnail"
+                    className="carousel-thumb"
+                  />
+                )
+              )
+            }
           >
-            {images.map((imgSrc, index) => (
+            {images.map((media, index) => (
               <div key={index} className="carousel-image-container">
-                <img
-                  src={imgSrc}
-                  alt={imageSrc}
-                  className={`img contain`}
-                  loading="lazy"
-                />
+                {media.type === "video" ? (
+                  renderVideoThumbnail(media, index)
+                ) : (
+                  <img
+                    src={media.src || media}
+                    alt={imageSrc}
+                    className={`img contain`}
+                    loading="lazy"
+                  />
+                )}
               </div>
             ))}
           </Carousel>
@@ -147,9 +272,19 @@ export const Card = ({
             src={imageSrc}
             className={`img round-rectangle contain`}
             style={{ padding: "4%", margin: "0 auto", display: "block" }}
+            loading="lazy"
           />
         </div>
       )}
+      <VideoModal
+        open={videoModal.open}
+        onClose={() =>
+          setVideoModal({ open: false, src: null, poster: null, title: null })
+        }
+        src={videoModal.src}
+        poster={videoModal.poster}
+        title={videoModal.title}
+      />
       <div
         className={`info ${isExpanded ? "expanded" : ""}`}
         onClick={isExpanded ? undefined : handleCardClick}

@@ -53,6 +53,7 @@ const Experience = ({ title, desc, imgSrc }) => {
               src={src}
               alt={`${title} ${index + 1}`}
               className="carousel-image" // Add a class for styling
+              loading="lazy"
             />
           ))}
         </Carousel>
