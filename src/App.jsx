@@ -258,7 +258,7 @@ export const App = () => {
               <span className="text-wrapper-5"> won awards </span>
               <span className="text-wrapper-4">
                 in competitions. <br />I have taught classes on the Flutter
-                framework and have
+                framework and am
               </span>
               <span className="text-wrapper-5">
                 {" "}
