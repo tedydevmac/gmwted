@@ -12,6 +12,20 @@ import { ExperienceButton } from "./components/Experience/ExperienceControl";
 import InternshipCard from "./components/Internship/InternshipCard";
 
 export const App = () => {
+  // Helper function to detect and format video files
+  const formatMediaArray = (mediaArray) => {
+    return mediaArray.map(item => {
+      if (typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.MP4') || item.endsWith('.mov') || item.endsWith('.MOV'))) {
+        return {
+          type: 'video',
+          src: item,
+          poster: null // You can add poster frames later if needed
+        };
+      }
+      return typeof item === 'string' ? { type: 'image', src: item } : item;
+    });
+  };
+
   const [currentExperience, setCurrentExperience] = useState({
     title: "#ProjectSF",
     desc: "#ProjectSF is a 10 day 8 night learning journey to San Francisco, where we got to learn more about Silicon Valley from industry partners and mentors who work there, and got a feel for what it's like to work in San Francisco.",
@@ -433,7 +447,7 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={["/assets/virtualtour/video.MP4"]}
+              images={formatMediaArray(["/assets/virtualtour/video.MP4"])}
               title="SST Virtual Tour (Web)"
               description="This website lets potential students and parents explore the school and its facilities through a 360 degree tour. My 2024 Serve Project"
               imageUrl="fa-solid fa-school"
@@ -499,13 +513,13 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={[
+              images={formatMediaArray([
                 "/assets/nsc/1.webp",
                 "/assets/nsc/3.webp",
                 "/assets/nsc/4.webp",
                 "/assets/nsc/5.webp",
                 "/assets/nsc/videoplayback.mp4",
-              ]}
+              ])}
               title={"SP National Software Competition 2025"}
               description={
                 "Won 1st place overall. My team and I created: SG60 Portal App, an all-in-one one-stop platform for SG60 related matters, targeted towards the general public."
@@ -574,14 +588,6 @@ export const App = () => {
               github={"https://github.com/tedydevmac/buildingblocs_I27.git"}
             />
             <Card
-              tooBig={false}
-              singleImage={false}
-              images={[
-                "/assets/sutdwth/RAYdar.webp",
-                "/assets/sutdwth/1.mp4",
-                "/assets/sutdwth/2.mp4",
-                "/assets/sutdwth/1.webp",
-              ]}
               title="SUTD What The Hack 2024"
               description="For this hackathon, we built an AI enabled Chrome extension that tackles inequality regarding LGBTQ+ and minority groups."
               imageUrl="fa-brands fa-chrome"
@@ -589,6 +595,14 @@ export const App = () => {
               link={"https://devpost.com/software/raydar-8dh1xi"}
               github={"https://github.com/tedydevmac/RAYdar.git"}
               iconHover={true}
+              tooBig={false}
+              singleImage={false}
+              images={formatMediaArray([
+                "/assets/sutdwth/RAYdar.webp",
+                "/assets/sutdwth/1.mp4",
+                "/assets/sutdwth/2.mp4",
+                "/assets/sutdwth/1.webp",
+              ])}
               expanddesc={
                 "Inspiration:\nOur team realised that offensive messages are rampant in social media. Hence, we created a machine learning model to detect offensive messages against the LGBTQ+, different races and ethinicity and more groups.\n\nWhat it does:\nIt has 2 sub-features, a scanning feature and a typing check feature.\nScanning when the user opens the extension menu, a pop-up wil show with a scan button, where the user can click the button in order to scan all the text inside the text input to see how offensive it is.\nTyping check when the user is typing in a messaging app such as discord or telegram, what they are typing is checked in order to check for any hateful words or phrases in what they typed. If what they typed is hateful, the app will send them an alert warning them that their message is hateful, and advise them to change their language to something more constructive.\n\nHow we built it:\nWe used tensorflow to create the machine learning model in python. Then we used react to create the chrome extension. We used flask so that we can recieve the information from the model."
               }
@@ -677,13 +691,13 @@ export const App = () => {
             <Card
               tooBig={false}
               singleImage={false}
-              images={[
+              images={formatMediaArray([
                 "/assets/idc/1.webp",
                 "/assets/idc/2.webp",
                 "/assets/idc/3.webp",
                 "/assets/idc/iDC.mp4",
                 "/assets/idc/IDC_Poster.webp",
-              ]}
+              ])}
               title={"IDP Integrated Design Challenge 2025"}
               description={
                 "A challenge where we had to create an autonomous robot vehicle that uses computer vision to transport food."

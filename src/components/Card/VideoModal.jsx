@@ -36,12 +36,19 @@ const VideoModal = ({ open, onClose, src, poster, title }) => {
         </button>
         <video
           ref={videoRef}
-          src={src}
           poster={poster}
           controls
           autoPlay
+          muted
+          playsInline
+          preload="metadata"
           style={{ maxWidth: "90vw", maxHeight: "80vh", borderRadius: 16 }}
-        />
+        >
+          <source src={src} type="video/mp4" />
+          <source src={src.replace(/\.(mp4|MP4)$/, '.webm')} type="video/webm" />
+          <source src={src.replace(/\.(mp4|MP4)$/, '.ogv')} type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
         {title && <div className="video-modal-title">{title}</div>}
       </div>
     </div>,
