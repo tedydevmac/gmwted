@@ -910,6 +910,7 @@ export const App = () => {
       </div>
       {!isMobile && <Sidebar className="navigation" />}
       <SpeedInsights />
+      <Analytics />
     </div>
   );
 };
