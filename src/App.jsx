@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import React, { useState, useEffect, useRef } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
 import { Footer } from "./components/Footer/Footer";
@@ -14,15 +15,21 @@ import InternshipCard from "./components/Internship/InternshipCard";
 export const App = () => {
   // Helper function to detect and format video files
   const formatMediaArray = (mediaArray) => {
-    return mediaArray.map(item => {
-      if (typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.MP4') || item.endsWith('.mov') || item.endsWith('.MOV'))) {
+    return mediaArray.map((item) => {
+      if (
+        typeof item === "string" &&
+        (item.endsWith(".mp4") ||
+          item.endsWith(".MP4") ||
+          item.endsWith(".mov") ||
+          item.endsWith(".MOV"))
+      ) {
         return {
-          type: 'video',
+          type: "video",
           src: item,
-          poster: null // You can add poster frames later if needed
+          poster: null, // You can add poster frames later if needed
         };
       }
-      return typeof item === 'string' ? { type: 'image', src: item } : item;
+      return typeof item === "string" ? { type: "image", src: item } : item;
     });
   };
 
