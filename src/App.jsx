@@ -305,7 +305,7 @@ export const App = () => {
           </div>
           <img
             className="profile"
-            src="/assets/logos/IMG_3817.webp"
+            src="/assets/logos/IMG_3817.jpg"
             loading="lazy"
           />
         </div>
